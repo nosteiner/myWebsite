@@ -24,10 +24,14 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 // app.use('/', api);
 
 // Catch all other routes and return the index file
-app.get('/', (req, res) => {
-    console.log('yooooo')
-  res.sendFile(path.join(__dirname, 'dist/garageDoors/index.html'));
-//   res.sendFile('index.html', { root: path.join(__dirname, './dist/garageDoors') });
+// app.get('/', (req, res) => {
+//     console.log('yooooo')
+//   res.sendFile(path.join(__dirname, 'dist/garageDoors/index.html'));
+// //   res.sendFile('index.html', { root: path.join(__dirname, './dist/garageDoors') });
+// });
+app.get('*', function (req, res) {
+  const index = path.join(__dirname, 'dist', 'index.html');
+  res.sendFile(index);
 });
 
 /**
