@@ -315,6 +315,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -323,7 +324,10 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 
 
-var routes = [];
+
+var routes = [
+    { path: '', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] }
+];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
@@ -411,10 +415,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angular-bootstrap-md */ "./node_modules/angular-bootstrap-md/esm5/angular-bootstrap-md.es5.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
-/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
+/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -428,23 +435,29 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"],
-                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_6__["NavbarComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__["FooterComponent"],
+                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__["NavbarComponent"],
+                _components_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-                angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_2__["MDBBootstrapModule"].forRoot()
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
+                angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_2__["MDBBootstrapModule"].forRoot(),
+                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatButtonModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -517,6 +530,69 @@ var FooterComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/home/home.component.html":
+/*!*****************************************************!*\
+  !*** ./src/app/components/home/home.component.html ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "    <!-- Main -->\n    <header class=\"h-100\">\n    <div class=\"view\">\n      <div class=\"full-bg-img\">\n          <div class=\"mask rgba-black-light flex-center\">\n              <div class=\"container text-center white-text\">\n                  <div class=\"white-text text-center wow fadeInUp\">\n                      <h2>This Navbar is fixed</h2>\n                                 \n                      <h5>It will always stay visible on the top, even when you scroll down</h5>\n                      <br>\n                      <p>Full page intro with background image will be always displayed in full screen mode, regardless\n                          of device </p>\n                  </div>\n              </div>\n          </div>\n      </div>\n  </div>\n  <!-- /.Main -->\n</header>\n<!--Main Layout-->\n<main class=\"text-center py-5\">\n\n  <div class=\"container\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n\n              <p align=\"justify\">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis\n                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur\n                  sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\n                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip\n                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore\n                  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt\n                  mollit anim id est laborum.</p>\n\n          </div>\n      </div>\n  </div>\n  <button mat-fab color=\"warn\" id=\"fixedbutton\"><a href=\"tel:+972525599200\"> <i class=\"fa fa-2x fa-phone white-text\" aria-hidden=\"true\"></i></a></button>\n</main>\n<!--Main Layout-->"
+
+/***/ }),
+
+/***/ "./src/app/components/home/home.component.scss":
+/*!*****************************************************!*\
+  !*** ./src/app/components/home/home.component.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".view {\n  background: url(\"https://legacygaragedoorsbc.com/wp-content/uploads/2016/10/Legacy_Garage_Doors_Kelowna_Aluminum_Esteem.jpg\") no-repeat center center;\n  background-size: cover;\n  height: 100vh; }\n\n#fixedbutton {\n  position: fixed;\n  bottom: 40px;\n  right: 40px; }\n"
+
+/***/ }),
+
+/***/ "./src/app/components/home/home.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/components/home/home.component.ts ***!
+  \***************************************************/
+/*! exports provided: HomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var HomeComponent = /** @class */ (function () {
+    function HomeComponent() {
+    }
+    HomeComponent.prototype.ngOnInit = function () {
+    };
+    HomeComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-home',
+            template: __webpack_require__(/*! ./home.component.html */ "./src/app/components/home/home.component.html"),
+            styles: [__webpack_require__(/*! ./home.component.scss */ "./src/app/components/home/home.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], HomeComponent);
+    return HomeComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/navbar/navbar.component.html":
 /*!*********************************************************!*\
   !*** ./src/app/components/navbar/navbar.component.html ***!
@@ -524,7 +600,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"h-100\">\n  <mdb-navbar SideClass=\"navbar fixed-top navbar-expand-lg navbar-dark indigo scrolling-navbar intro-fixed-nav\" [containerInside]=\"false\">\n      <mdb-navbar-brand>\n          <a class=\"logo navbar-brand\" href=\"#\"><strong>Garage Doors</strong></a>\n      </mdb-navbar-brand>\n      <links>\n          <ul class=\"navbar-nav mr-auto\">\n              <li class=\"nav-item waves-light\" mdbWavesEffect>\n                  <a class=\"nav-link\">Home</a>\n              </li>\n               <!-- Dropdown -->\n            <li class=\"nav-item dropdown\" dropdown>\n              <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\" mdbWavesEffect>\n             Services<span class=\"caret\"></span></a>\n              <div *dropdownMenu class=\"dropdown-menu dropdown dropdown-primary\" role=\"menu\">\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect href=\"#\">Action</a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect href=\"#\">Another action</a>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect href=\"#\">Something else here</a>\n                  <div class=\"divider dropdown-divider\"></div>\n                  <a class=\"dropdown-item waves-light\" mdbWavesEffect href=\"#\">Separated link</a>\n              </div>\n          </li>\n              <li class=\"nav-item waves-light\" mdbWavesEffect>\n                  <a class=\"nav-link\">Gallery</a>\n              </li>\n              <li class=\"nav-item waves-light\" mdbWavesEffect>\n                <a class=\"nav-link\">Contact</a>\n            </li>\n          </ul>\n      </links>\n  </mdb-navbar>\n  <!-- Main -->\n  <div class=\"view\">\n    <div class=\"full-bg-img\">\n        <div class=\"mask rgba-black-light flex-center\">\n            <div class=\"container text-center white-text\">\n                <div class=\"white-text text-center wow fadeInUp\">\n                    <h2>This Navbar is fixed</h2>\n                    <a href=\"tel:+972525599200\" class=\"Blondie\">\n                        Call me, call me any, anytime\n                          <b>Call me (call me) I'll arrive</b>\n                            When you're ready we can share the wine!\n                    </a> \n                    <h5>It will always stay visible on the top, even when you scroll down</h5>\n                    <br>\n                    <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n  <!-- /.Main -->\n</header>\n<!--Main Layout-->\n<main class=\"text-center py-5\">\n\n  <div class=\"container\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n\n              <p align=\"justify\">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\n          </div>\n      </div>\n  </div>\n\n</main>\n<!--Main Layout-->"
+module.exports = "\n    <mdb-navbar SideClass=\"navbar fixed-top navbar-expand-lg navbar-dark indigo scrolling-navbar intro-fixed-nav\" [containerInside]=\"false\">\n        <mdb-navbar-brand>\n            <a class=\"logo navbar-brand\" href=\"#\"><strong>Garage Doors</strong></a>\n        </mdb-navbar-brand>\n        <links>\n            <ul class=\"navbar-nav mr-auto\">\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\">Home</a>\n                </li>\n                <!-- Dropdown -->\n                <li class=\"nav-item dropdown\" dropdown>\n                    <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\" mdbWavesEffect>\n                        Services<span class=\"caret\"></span></a>\n                    <div *dropdownMenu class=\"dropdown-menu dropdown dropdown-primary\" role=\"menu\">\n                        <a class=\"dropdown-item waves-light\" mdbWavesEffect href=\"#\">Action</a>\n                        <a class=\"dropdown-item waves-light\" mdbWavesEffect href=\"#\">Another action</a>\n                        <a class=\"dropdown-item waves-light\" mdbWavesEffect href=\"#\">Something else here</a>\n                        <div class=\"divider dropdown-divider\"></div>\n                        <a class=\"dropdown-item waves-light\" mdbWavesEffect href=\"#\">Separated link</a>\n                    </div>\n                </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\">Gallery</a>\n                </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\">Contact</a>\n                </li>\n            </ul>\n        </links>\n    </mdb-navbar>\n"
 
 /***/ }),
 
@@ -535,7 +611,7 @@ module.exports = "<header class=\"h-100\">\n  <mdb-navbar SideClass=\"navbar fix
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".view {\n  background: url(\"https://legacygaragedoorsbc.com/wp-content/uploads/2016/10/Legacy_Garage_Doors_Kelowna_Aluminum_Esteem.jpg\") no-repeat center center;\n  background-size: cover;\n  height: 100vh; }\n"
+module.exports = ""
 
 /***/ }),
 
