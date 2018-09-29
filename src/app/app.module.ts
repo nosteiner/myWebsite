@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material';
+import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +13,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { MapComponent } from './components/map/map.component';
-import { AgmCoreModule } from '@agm/core';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { ContactCardComponent } from './components/contact-card/contact-card.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,9 @@ import { AgmCoreModule } from '@agm/core';
     NavbarComponent,
     HomeComponent,
     ContactComponent,
-    MapComponent
+    MapComponent,
+    GalleryComponent,
+    ContactCardComponent
   ],
   imports: [
     BrowserModule,
@@ -28,10 +34,8 @@ import { AgmCoreModule } from '@agm/core';
     MDBBootstrapModule.forRoot(),
     MatButtonModule,
     BrowserAnimationsModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyB1qxcyI1ldKkHo7WJVzlxEZjus_tu9TPk'
-    })
-
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

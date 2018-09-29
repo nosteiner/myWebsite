@@ -1,0 +1,44 @@
+<!-- Default form contact -->
+<form class="text-center border border-light p-5">
+
+  <p class="h4 mb-4">Contact us</p>
+
+  <!-- Name -->
+  <input [(ngModel)]="message.name" name="name" type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+ <!-- Phone Number -->
+ <input [(ngModel)]="message.phoneNumber" name="name" type="text" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Phone Number">
+  <!-- Email -->
+  <input [(ngModel)]="message.email" name="name" type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+  <!-- Subject -->
+  <label>Subject</label>
+  <select  [(ngModel)]="message.subject"  name="name" class="browser-default custom-select mb-4">
+    <option value="" disabled>Choose option</option>
+    <option value="Feedback" selected>Feedback</option>
+    <option value="Report a bug">Report a bug</option>
+    <option value="Feature request">Feature request</option>
+    <option value="Feature request">Feature request</option>
+  </select>
+<!-- Name -->
+<input [(ngModel)]="message.title" name="name" type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Title">
+  <!-- Message -->
+  <div class="form-group">
+    <textarea [(ngModel)]="message.text" name="name" class="form-control rounded-0" id="exampleFormControlTextarea2" rows="6" placeholder="Message"></textarea>
+  </div>
+
+  <!-- Copy -->
+  <div class="row">
+    <div class="col-md-6 mx-auto d-flex justify-content-center">
+      <div class="custom-control custom-checkbox mb-4">
+        <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+        <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Send button -->
+  <button (click)="sendMailHandler()" class="btn btn-info btn-block" type="button">Send</button>
+
+</form>
+<!-- Default form contact -->
