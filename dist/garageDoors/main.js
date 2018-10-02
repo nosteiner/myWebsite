@@ -345,6 +345,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
 /* harmony import */ var _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/contact/contact.component */ "./src/app/components/contact/contact.component.ts");
+/* harmony import */ var _components_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/gallery/gallery.component */ "./src/app/components/gallery/gallery.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -355,9 +356,11 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
     { path: '', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
-    { path: 'contact', component: _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_3__["ContactComponent"] }
+    { path: 'contact', component: _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_3__["ContactComponent"] },
+    { path: 'gallery', component: _components_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_4__["GalleryComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -739,7 +742,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  gallery works!\n</p>\n"
+module.exports = "<!--Carousel Wrapper-->\n<mdb-carousel [isControls]=\"true\" class=\"carousel slide carousel-fade\" [animation]=\"'fade'\">\n    <!--First slide-->\n    <mdb-carousel-item>\n      <div class=\"view w-100\">\n        <img class=\"d-block w-100\" src=\"https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg\" alt=\"First slide\">\n        <div class=\"mask rgba-black-light waves-light\" mdbWavesEffect></div>\n      </div>\n      <div class=\"carousel-caption\">\n        <h3 class=\"h3-responsive\">Light mask</h3>\n        <p>First text</p>\n      </div>\n    </mdb-carousel-item>\n    <!--/First slide-->\n    <!--Second slide-->\n    <mdb-carousel-item>\n      <div class=\"view w-100\">\n        <img class=\"d-block w-100\" src=\"https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg\" alt=\"Second slide\">\n        <div class=\"mask rgba-black-strong waves-light\" mdbWavesEffect></div>\n      </div>\n      <div class=\"carousel-caption\">\n        <h3 class=\"h3-responsive\">Strong mask</h3>\n        <p>Secondary text</p>\n      </div>\n    </mdb-carousel-item>\n    <!--/Second slide-->\n    <!--Third slide-->\n    <mdb-carousel-item>\n      <div class=\"view w-100\">\n        <img class=\"d-block w-100\" src=\"https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg\" alt=\"Third slide\">\n        <div class=\"mask rgba-black-slight waves-light\" mdbWavesEffect></div>\n      </div>\n      <div class=\"carousel-caption\">\n        <h3 class=\"h3-responsive\">Slight mask</h3>\n        <p>Third text</p>\n      </div>\n    </mdb-carousel-item>\n    <!--/Third slide-->\n  </mdb-carousel>\n  <!--/.Carousel Wrapper-->"
 
 /***/ }),
 
@@ -906,7 +909,7 @@ var MapComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n    <mdb-navbar SideClass=\"navbar  navbar-expand-lg navbar-dark indigo scrolling-navbar intro-fixed-nav\" [containerInside]=\"false\">\n        <mdb-navbar-brand>\n            <a class=\"logo navbar-brand\" href=\"#\"><strong>Garage Doors</strong></a>\n        </mdb-navbar-brand>\n        <links>\n            <ul class=\"navbar-nav mr-auto\">\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" routerLink=\"\">Home</a>\n                </li>\n                <!-- Dropdown -->\n                <li class=\"nav-item dropdown\" dropdown>\n                    <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\" mdbWavesEffect>\n                        Services<span class=\"caret\"></span></a>\n                    <div *dropdownMenu class=\"dropdown-menu dropdown dropdown-primary\" role=\"menu\">\n                        <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"installation\">Installation</a>\n                        <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"repair\">Repair</a>\n                    </div>\n                </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\">Gallery</a>\n                </li>\n                <li class=\"nav-item waves-light float-right\" mdbWavesEffect>\n                    <a class=\"nav-link\" routerLink=\"contact\" >Contact</a>\n                </li>\n            </ul>\n        </links>\n    </mdb-navbar>\n"
+module.exports = "\n    <mdb-navbar SideClass=\"navbar  navbar-expand-lg navbar-dark indigo scrolling-navbar intro-fixed-nav\" [containerInside]=\"false\">\n        <mdb-navbar-brand>\n            <a class=\"logo navbar-brand\" href=\"#\"><strong>Garage Doors</strong></a>\n        </mdb-navbar-brand>\n        <links>\n            <ul class=\"navbar-nav mr-auto\">\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" routerLink=\"\">Home</a>\n                </li>\n                <!-- Dropdown -->\n                <li class=\"nav-item dropdown\" dropdown>\n                    <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\" mdbWavesEffect>\n                        Services<span class=\"caret\"></span></a>\n                    <div *dropdownMenu class=\"dropdown-menu dropdown dropdown-primary\" role=\"menu\">\n                        <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"installation\">Installation</a>\n                        <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"repair\">Repair</a>\n                    </div>\n                </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" routerLink=\"gallery\">Gallery</a>\n                </li>\n                <li class=\"nav-item waves-light float-right\" mdbWavesEffect>\n                    <a class=\"nav-link\" routerLink=\"contact\" >Contact</a>\n                </li>\n            </ul>\n        </links>\n    </mdb-navbar>\n"
 
 /***/ }),
 
