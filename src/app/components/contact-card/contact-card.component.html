@@ -1,13 +1,14 @@
-<div class="row" *ngIf="emailSent == false">
-    <div class="d-flex align-content-center flex-wrap col-md-6 mt-md-0 mt-3">
+<div class="container">
+<div class="row justify-content-md-center" *ngIf="emailSent == false">
+    <!-- <div class="d-flex align-content-center flex-wrap col-md-6 mt-md-0 mt-3">
         <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquam ante rutrum, iaculis purus iaculis, imperdiet erat. Suspendisse libero ante, faucibus in ex id, pharetra efficitur nisi. Pellentesque mattis mi velit, eu ultrices sem malesuada sed. Suspendisse laoreet magna tincidunt, imperdiet massa a, consectetur leo. Sed eleifend consectetur auctor. Nam varius rhoncus volutpat.</p>
     </div>
   
-  <div class="col-md-6 mt-md-0 mt-3">
+  <div class="col-md-6 mt-md-0 mt-3"> -->
 
   
   
-
+<div class="col-md-6">
 <!-- Default form contact -->
 <form [formGroup]="messageEdit" class="text-center border border-light p-5" >
 
@@ -41,6 +42,7 @@
 
 </form>
 <!-- Default form contact -->
+<!-- </div> -->
 </div>
 </div>
 
@@ -48,4 +50,5 @@
 <div class="emailSent" *ngIf="emailSent == true">
 <h4 >Your message has been sent successfully We will contact you shortly</h4>
 <h5><a routerLink=""> Return to home page</a></h5>
+</div>
 </div>
