@@ -1,44 +1,51 @@
+<div class="row" *ngIf="emailSent == false">
+    <div class="d-flex align-content-center flex-wrap col-md-6 mt-md-0 mt-3">
+        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquam ante rutrum, iaculis purus iaculis, imperdiet erat. Suspendisse libero ante, faucibus in ex id, pharetra efficitur nisi. Pellentesque mattis mi velit, eu ultrices sem malesuada sed. Suspendisse laoreet magna tincidunt, imperdiet massa a, consectetur leo. Sed eleifend consectetur auctor. Nam varius rhoncus volutpat.</p>
+    </div>
+  
+  <div class="col-md-6 mt-md-0 mt-3">
+
+  
+  
+
 <!-- Default form contact -->
-<form class="text-center border border-light p-5">
+<form [formGroup]="messageEdit" class="text-center border border-light p-5" >
 
   <p class="h4 mb-4">Contact us</p>
 
   <!-- Name -->
-  <input [(ngModel)]="message.name" name="name" type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+  <input formControlName="name" data-error="This field is required" data-success="" mdbInputDirective type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
  <!-- Phone Number -->
- <input [(ngModel)]="message.phoneNumber" name="name" type="text" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Phone Number">
+ <input formControlName="phoneNumber" mdbInputDirective type="text" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Phone Number">
   <!-- Email -->
-  <input [(ngModel)]="message.email" name="name" type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+  <input formControlName="email" data-error="This field is required" data-success="" mdbInputDirective type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
 
   <!-- Subject -->
   <label>Subject</label>
-  <select  [(ngModel)]="message.subject"  name="name" class="browser-default custom-select mb-4">
+  <select  formControlName="subject" data-error="This field is required" data-success="" mdbInputDirective class="browser-default custom-select mb-4">
     <option value="" disabled>Choose option</option>
     <option value="Feedback" selected>Feedback</option>
     <option value="Report a bug">Report a bug</option>
     <option value="Feature request">Feature request</option>
-    <option value="Feature request">Feature request</option>
+    <option value="Feature request">Other</option>
   </select>
 <!-- Name -->
-<input [(ngModel)]="message.title" name="name" type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Title">
+<input formControlName="title" data-error="This field is required" data-success="" mdbInputDirective type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Title">
   <!-- Message -->
   <div class="form-group">
-    <textarea [(ngModel)]="message.text" name="name" class="form-control rounded-0" id="exampleFormControlTextarea2" rows="6" placeholder="Message"></textarea>
+    <textarea  formControlName="text" data-error="This field is required" data-success="" mdbInputDirective class="form-control rounded-0" id="exampleFormControlTextarea2" rows="6" placeholder="Message"></textarea>
   </div>
-
-  <!-- Copy -->
-  <div class="row">
-    <div class="col-md-6 mx-auto d-flex justify-content-center">
-      <div class="custom-control custom-checkbox mb-4">
-        <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
-        <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
-      </div>
-    </div>
-  </div>
-
 
   <!-- Send button -->
-  <button (click)="sendMailHandler()" class="btn btn-info btn-block" type="button">Send</button>
+  <button (click)="sendMailHandler()" class="btn btn-info btn-block" type="button" [disabled]="!messageEdit.valid">Send</button>
 
 </form>
 <!-- Default form contact -->
+</div>
+</div>
+
+
+<div class="emailSent" *ngIf="emailSent == true">
+<h4 >Your message has been sent successfully We will contact you shortly</h4>
+<h5><a routerLink=""> Return to home page</a></h5>
+</div>

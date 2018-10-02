@@ -10,9 +10,6 @@ export class ContactService {
   constructor(private http: HttpClient) { }
 
   sendEmail(message){
-    console.log("message")
-    this.http.post<Message>('sendEmail',message).subscribe(() => {
-      console.log("email sent")
-    })
+   return this.http.post<Message>('sendEmail',message)
   }
 }

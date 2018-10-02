@@ -316,6 +316,14 @@ __webpack_require__.r(__webpack_exports__);
 var Message = /** @class */ (function () {
     function Message() {
     }
+    Message.prototype.edit = function (data) {
+        this.name = data.name;
+        this.phoneNumber = data.phoneNumber;
+        this.email = data.email;
+        this.title = data.title;
+        this.subject = data.subject;
+        this.text = data.text;
+    };
     return Message;
 }());
 
@@ -495,7 +503,8 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatButtonModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"]
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
@@ -515,7 +524,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Default form contact -->\n<form class=\"text-center border border-light p-5\">\n\n  <p class=\"h4 mb-4\">Contact us</p>\n\n  <!-- Name -->\n  <input [(ngModel)]=\"message.name\" name=\"name\" type=\"text\" id=\"defaultContactFormName\" class=\"form-control mb-4\" placeholder=\"Name\">\n <!-- Phone Number -->\n <input [(ngModel)]=\"message.phoneNumber\" name=\"name\" type=\"text\" id=\"defaultContactFormEmail\" class=\"form-control mb-4\" placeholder=\"Phone Number\">\n  <!-- Email -->\n  <input [(ngModel)]=\"message.email\" name=\"name\" type=\"email\" id=\"defaultContactFormEmail\" class=\"form-control mb-4\" placeholder=\"E-mail\">\n\n  <!-- Subject -->\n  <label>Subject</label>\n  <select  [(ngModel)]=\"message.subject\"  name=\"name\" class=\"browser-default custom-select mb-4\">\n    <option value=\"\" disabled>Choose option</option>\n    <option value=\"Feedback\" selected>Feedback</option>\n    <option value=\"Report a bug\">Report a bug</option>\n    <option value=\"Feature request\">Feature request</option>\n    <option value=\"Feature request\">Feature request</option>\n  </select>\n<!-- Name -->\n<input [(ngModel)]=\"message.title\" name=\"name\" type=\"text\" id=\"defaultContactFormName\" class=\"form-control mb-4\" placeholder=\"Title\">\n  <!-- Message -->\n  <div class=\"form-group\">\n    <textarea [(ngModel)]=\"message.text\" name=\"name\" class=\"form-control rounded-0\" id=\"exampleFormControlTextarea2\" rows=\"6\" placeholder=\"Message\"></textarea>\n  </div>\n\n  <!-- Copy -->\n  <div class=\"row\">\n    <div class=\"col-md-6 mx-auto d-flex justify-content-center\">\n      <div class=\"custom-control custom-checkbox mb-4\">\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"defaultContactFormCopy\">\n        <label class=\"custom-control-label\" for=\"defaultContactFormCopy\">Send me a copy of this message</label>\n      </div>\n    </div>\n  </div>\n\n\n  <!-- Send button -->\n  <button (click)=\"sendMailHandler()\" class=\"btn btn-info btn-block\" type=\"button\">Send</button>\n\n</form>\n<!-- Default form contact -->"
+module.exports = "<div class=\"row\" *ngIf=\"emailSent == false\">\n    <div class=\"d-flex align-content-center flex-wrap col-md-6 mt-md-0 mt-3\">\n        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquam ante rutrum, iaculis purus iaculis, imperdiet erat. Suspendisse libero ante, faucibus in ex id, pharetra efficitur nisi. Pellentesque mattis mi velit, eu ultrices sem malesuada sed. Suspendisse laoreet magna tincidunt, imperdiet massa a, consectetur leo. Sed eleifend consectetur auctor. Nam varius rhoncus volutpat.</p>\n    </div>\n  \n  <div class=\"col-md-6 mt-md-0 mt-3\">\n\n  \n  \n\n<!-- Default form contact -->\n<form [formGroup]=\"messageEdit\" class=\"text-center border border-light p-5\" >\n\n  <p class=\"h4 mb-4\">Contact us</p>\n\n  <!-- Name -->\n  <input formControlName=\"name\" data-error=\"This field is required\" data-success=\"\" mdbInputDirective type=\"text\" id=\"defaultContactFormName\" class=\"form-control mb-4\" placeholder=\"Name\">\n <!-- Phone Number -->\n <input formControlName=\"phoneNumber\" mdbInputDirective type=\"text\" id=\"defaultContactFormEmail\" class=\"form-control mb-4\" placeholder=\"Phone Number\">\n  <!-- Email -->\n  <input formControlName=\"email\" data-error=\"This field is required\" data-success=\"\" mdbInputDirective type=\"email\" id=\"defaultContactFormEmail\" class=\"form-control mb-4\" placeholder=\"E-mail\">\n\n  <!-- Subject -->\n  <label>Subject</label>\n  <select  formControlName=\"subject\" data-error=\"This field is required\" data-success=\"\" mdbInputDirective class=\"browser-default custom-select mb-4\">\n    <option value=\"\" disabled>Choose option</option>\n    <option value=\"Feedback\" selected>Feedback</option>\n    <option value=\"Report a bug\">Report a bug</option>\n    <option value=\"Feature request\">Feature request</option>\n    <option value=\"Feature request\">Other</option>\n  </select>\n<!-- Name -->\n<input formControlName=\"title\" data-error=\"This field is required\" data-success=\"\" mdbInputDirective type=\"text\" id=\"defaultContactFormName\" class=\"form-control mb-4\" placeholder=\"Title\">\n  <!-- Message -->\n  <div class=\"form-group\">\n    <textarea  formControlName=\"text\" data-error=\"This field is required\" data-success=\"\" mdbInputDirective class=\"form-control rounded-0\" id=\"exampleFormControlTextarea2\" rows=\"6\" placeholder=\"Message\"></textarea>\n  </div>\n\n  <!-- Send button -->\n  <button (click)=\"sendMailHandler()\" class=\"btn btn-info btn-block\" type=\"button\" [disabled]=\"!messageEdit.valid\">Send</button>\n\n</form>\n<!-- Default form contact -->\n</div>\n</div>\n\n\n<div class=\"emailSent\" *ngIf=\"emailSent == true\">\n<h4 >Your message has been sent successfully We will contact you shortly</h4>\n<h5><a routerLink=\"\"> Return to home page</a></h5>\n</div>"
 
 /***/ }),
 
@@ -526,7 +535,7 @@ module.exports = "<!-- Default form contact -->\n<form class=\"text-center borde
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".emailSent {\n  text-align: center;\n  padding: 70px 0; }\n"
 
 /***/ }),
 
@@ -543,6 +552,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _Message__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Message */ "./src/app/Message.ts");
 /* harmony import */ var _contact_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../contact.service */ "./src/app/contact.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -555,15 +565,31 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var ContactCardComponent = /** @class */ (function () {
-    function ContactCardComponent(contactService) {
+    function ContactCardComponent(contactService, fb) {
         this.contactService = contactService;
+        this.fb = fb;
+        this.emailSent = false;
         this.message = new _Message__WEBPACK_IMPORTED_MODULE_1__["Message"]();
+        this.messageEdit = fb.group({
+            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.message.name, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]),
+            phoneNumber: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.message.phoneNumber, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im)]),
+            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.message.email, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
+            title: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.message.title, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]),
+            subject: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.message.title, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]),
+            text: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.message.text, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]),
+        });
     }
     ContactCardComponent.prototype.ngOnInit = function () {
     };
     ContactCardComponent.prototype.sendMailHandler = function () {
-        this.contactService.sendEmail(this.message);
+        var _this = this;
+        console.log(this.messageEdit.value);
+        this.message.edit(this.messageEdit.value);
+        this.contactService.sendEmail(this.message).subscribe(function () {
+            _this.emailSent = true;
+        });
     };
     ContactCardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -571,7 +597,7 @@ var ContactCardComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./contact-card.component.html */ "./src/app/components/contact-card/contact-card.component.html"),
             styles: [__webpack_require__(/*! ./contact-card.component.scss */ "./src/app/components/contact-card/contact-card.component.scss")]
         }),
-        __metadata("design:paramtypes", [_contact_service__WEBPACK_IMPORTED_MODULE_2__["ContactService"]])
+        __metadata("design:paramtypes", [_contact_service__WEBPACK_IMPORTED_MODULE_2__["ContactService"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
     ], ContactCardComponent);
     return ContactCardComponent;
 }());
@@ -587,7 +613,7 @@ var ContactCardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-4 mt-md-0 mt-3\"></div>\n\n<div class=\"col-md-8 mt-md-0 mt-3\"><app-contact-card></app-contact-card></div>\n</div>\n"
+module.exports = "\n<app-contact-card></app-contact-card>\n\n"
 
 /***/ }),
 
@@ -776,7 +802,7 @@ var GalleryComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "    <!-- Main -->\n    <header class=\"h-100\">\n    <div class=\"view\">\n      <div class=\"full-bg-img\">\n          <div class=\"mask rgba-black-light flex-center\">\n              <div class=\"container text-center white-text\">\n                  <div class=\"white-text text-center wow fadeInUp\">\n                      <h2>This Navbar is fixed</h2>\n                                 \n                      <h5>It will always stay visible on the top, even when you scroll down</h5>\n                      <br>\n                      <p>Full page intro with background image will be always displayed in full screen mode, regardless\n                          of device </p>\n                  </div>\n              </div>\n          </div>\n      </div>\n  </div>\n  <!-- /.Main -->\n</header>\n<!--Main Layout-->\n<main class=\"text-center py-5\">\n\n  <div class=\"container\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n\n              <p align=\"justify\">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis\n                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur\n                  sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\n                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip\n                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore\n                  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt\n                  mollit anim id est laborum.</p>\n\n          </div>\n      </div>\n  </div>\n  <button mat-fab color=\"warn\" id=\"fixedbutton\"><a href=\"tel:+972525599200\"> <i class=\"fa fa-2x fa-phone white-text\" aria-hidden=\"true\"></i></a></button>\n</main>\n<!--Main Layout-->"
+module.exports = "    <!-- Main -->\n    <header class=\"h-100\">\n    <div class=\"view\">\n      <div class=\"full-bg-img\">\n          <div class=\"mask rgba-black-light flex-center\">\n              <div class=\"container text-center white-text\">\n                  <div class=\"white-text text-center wow fadeInUp\">\n                      <h2>Lorem ipsum dolor sit amet</h2>\n                                 \n                      <h5>Ut enim ad minim veniam, quis nostrud exercitation</h5>\n                      <br>\n                      <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>\n                  </div>\n              </div>\n          </div>\n      </div>\n  </div>\n  <!-- /.Main -->\n</header>\n<!--Main Layout-->\n<main class=\"text-center py-5\">\n\n  <div class=\"container\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n\n              <p align=\"justify\">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis\n                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur\n                  sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\n                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip\n                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore\n                  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt\n                  mollit anim id est laborum.</p>\n\n          </div>\n      </div>\n  </div>\n  <button mat-fab color=\"warn\" id=\"fixedbutton\"><a href=\"tel:+972525599200\"> <i class=\"fa fa-2x fa-phone white-text\" aria-hidden=\"true\"></i></a></button>\n</main>\n<!--Main Layout-->"
 
 /***/ }),
 
@@ -880,7 +906,7 @@ var MapComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n    <mdb-navbar SideClass=\"navbar fixed-top navbar-expand-lg navbar-dark indigo scrolling-navbar intro-fixed-nav\" [containerInside]=\"false\">\n        <mdb-navbar-brand>\n            <a class=\"logo navbar-brand\" href=\"#\"><strong>Garage Doors</strong></a>\n        </mdb-navbar-brand>\n        <links>\n            <ul class=\"navbar-nav mr-auto\">\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" routerLink=\"\">Home</a>\n                </li>\n                <!-- Dropdown -->\n                <li class=\"nav-item dropdown\" dropdown>\n                    <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\" mdbWavesEffect>\n                        Services<span class=\"caret\"></span></a>\n                    <div *dropdownMenu class=\"dropdown-menu dropdown dropdown-primary\" role=\"menu\">\n                        <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"installation\">Installation</a>\n                        <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"repair\">Repair</a>\n                    </div>\n                </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\">Gallery</a>\n                </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" routerLink=\"contact\" >Contact</a>\n                </li>\n            </ul>\n        </links>\n    </mdb-navbar>\n"
+module.exports = "\n    <mdb-navbar SideClass=\"navbar  navbar-expand-lg navbar-dark indigo scrolling-navbar intro-fixed-nav\" [containerInside]=\"false\">\n        <mdb-navbar-brand>\n            <a class=\"logo navbar-brand\" href=\"#\"><strong>Garage Doors</strong></a>\n        </mdb-navbar-brand>\n        <links>\n            <ul class=\"navbar-nav mr-auto\">\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" routerLink=\"\">Home</a>\n                </li>\n                <!-- Dropdown -->\n                <li class=\"nav-item dropdown\" dropdown>\n                    <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\" mdbWavesEffect>\n                        Services<span class=\"caret\"></span></a>\n                    <div *dropdownMenu class=\"dropdown-menu dropdown dropdown-primary\" role=\"menu\">\n                        <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"installation\">Installation</a>\n                        <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"repair\">Repair</a>\n                    </div>\n                </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\">Gallery</a>\n                </li>\n                <li class=\"nav-item waves-light float-right\" mdbWavesEffect>\n                    <a class=\"nav-link\" routerLink=\"contact\" >Contact</a>\n                </li>\n            </ul>\n        </links>\n    </mdb-navbar>\n"
 
 /***/ }),
 
@@ -964,10 +990,7 @@ var ContactService = /** @class */ (function () {
         this.http = http;
     }
     ContactService.prototype.sendEmail = function (message) {
-        console.log("message");
-        this.http.post('sendEmail', message).subscribe(function () {
-            console.log("email sent");
-        });
+        return this.http.post('sendEmail', message);
     };
     ContactService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
