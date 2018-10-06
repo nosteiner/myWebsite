@@ -34,11 +34,10 @@ app.post('/sendEmail', (req, res) => {
   var mailOptions = {
     from: req.body.name,
     to: 'no.steiner@gmail.com',
-    subject: req.body.subject + ":" + req.body.title,
+    subject: req.body.title,
     html: '<h2>'+ req.body.title +'</h2>'+
       '<p>'+  req.body.text +'</p>'+
       '<p><b>Name: </b>'+ req.body.name+'<p>'+
-      '<p><b>Phone number: </b>'+req.body.phoneNumber +'<p>'+
       '<p><b>Email: </b>'+ req.body.email+'<p>'
      
     };

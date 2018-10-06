@@ -10,31 +10,22 @@
   
 <div class="col-md-6">
 <!-- Default form contact -->
-<form [formGroup]="messageEdit" class="text-center border border-light p-5" >
+<form [formGroup]="messageEdit" class="text-center  p-5" >
 
-  <p class="h4 mb-4">Contact us</p>
+  <p class="h1 mb-4">Talk to me</p>
 
   <!-- Name -->
-  <input formControlName="name" data-error="This field is required" data-success="" mdbInputDirective type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
- <!-- Phone Number -->
- <input formControlName="phoneNumber" mdbInputDirective type="text" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Phone Number">
+ 
+  <input formControlName="name" type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+  
   <!-- Email -->
-  <input formControlName="email" data-error="This field is required" data-success="" mdbInputDirective type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+  <input formControlName="email" mdbInputDirective type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
 
-  <!-- Subject -->
-  <label>Subject</label>
-  <select  formControlName="subject" data-error="This field is required" data-success="" mdbInputDirective class="browser-default custom-select mb-4">
-    <option value="" disabled>Choose option</option>
-    <option value="Feedback" selected>Feedback</option>
-    <option value="Report a bug">Report a bug</option>
-    <option value="Feature request">Feature request</option>
-    <option value="Feature request">Other</option>
-  </select>
 <!-- Name -->
-<input formControlName="title" data-error="This field is required" data-success="" mdbInputDirective type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Title">
+<input formControlName="title" type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Title">
   <!-- Message -->
   <div class="form-group">
-    <textarea  formControlName="text" data-error="This field is required" data-success="" mdbInputDirective class="form-control rounded-0" id="exampleFormControlTextarea2" rows="6" placeholder="Message"></textarea>
+    <textarea  formControlName="text" class="form-control rounded-0" id="exampleFormControlTextarea2" rows="6" placeholder="Message"></textarea>
   </div>
 
   <!-- Send button -->

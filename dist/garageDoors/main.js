@@ -318,10 +318,8 @@ var Message = /** @class */ (function () {
     }
     Message.prototype.edit = function (data) {
         this.name = data.name;
-        this.phoneNumber = data.phoneNumber;
         this.email = data.email;
         this.title = data.title;
-        this.subject = data.subject;
         this.text = data.text;
     };
     return Message;
@@ -385,7 +383,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n<router-outlet></router-outlet>\n<app-footer></app-footer>\n"
+module.exports = "<app-navbar></app-navbar>\n<router-outlet></router-outlet>\n<app-contact-card></app-contact-card>\n<app-footer></app-footer>\n"
 
 /***/ }),
 
@@ -530,7 +528,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n<div class=\"row justify-content-md-center\" *ngIf=\"emailSent == false\">\n    <!-- <div class=\"d-flex align-content-center flex-wrap col-md-6 mt-md-0 mt-3\">\n        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquam ante rutrum, iaculis purus iaculis, imperdiet erat. Suspendisse libero ante, faucibus in ex id, pharetra efficitur nisi. Pellentesque mattis mi velit, eu ultrices sem malesuada sed. Suspendisse laoreet magna tincidunt, imperdiet massa a, consectetur leo. Sed eleifend consectetur auctor. Nam varius rhoncus volutpat.</p>\n    </div>\n  \n  <div class=\"col-md-6 mt-md-0 mt-3\"> -->\n\n  \n  \n<div class=\"col-md-6\">\n<!-- Default form contact -->\n<form [formGroup]=\"messageEdit\" class=\"text-center border border-light p-5\" >\n\n  <p class=\"h4 mb-4\">Contact us</p>\n\n  <!-- Name -->\n  <input formControlName=\"name\" data-error=\"This field is required\" data-success=\"\" mdbInputDirective type=\"text\" id=\"defaultContactFormName\" class=\"form-control mb-4\" placeholder=\"Name\">\n <!-- Phone Number -->\n <input formControlName=\"phoneNumber\" mdbInputDirective type=\"text\" id=\"defaultContactFormEmail\" class=\"form-control mb-4\" placeholder=\"Phone Number\">\n  <!-- Email -->\n  <input formControlName=\"email\" data-error=\"This field is required\" data-success=\"\" mdbInputDirective type=\"email\" id=\"defaultContactFormEmail\" class=\"form-control mb-4\" placeholder=\"E-mail\">\n\n  <!-- Subject -->\n  <label>Subject</label>\n  <select  formControlName=\"subject\" data-error=\"This field is required\" data-success=\"\" mdbInputDirective class=\"browser-default custom-select mb-4\">\n    <option value=\"\" disabled>Choose option</option>\n    <option value=\"Feedback\" selected>Feedback</option>\n    <option value=\"Report a bug\">Report a bug</option>\n    <option value=\"Feature request\">Feature request</option>\n    <option value=\"Feature request\">Other</option>\n  </select>\n<!-- Name -->\n<input formControlName=\"title\" data-error=\"This field is required\" data-success=\"\" mdbInputDirective type=\"text\" id=\"defaultContactFormName\" class=\"form-control mb-4\" placeholder=\"Title\">\n  <!-- Message -->\n  <div class=\"form-group\">\n    <textarea  formControlName=\"text\" data-error=\"This field is required\" data-success=\"\" mdbInputDirective class=\"form-control rounded-0\" id=\"exampleFormControlTextarea2\" rows=\"6\" placeholder=\"Message\"></textarea>\n  </div>\n\n  <!-- Send button -->\n  <button (click)=\"sendMailHandler()\" class=\"btn btn-info btn-block\" type=\"button\" [disabled]=\"!messageEdit.valid\">Send</button>\n\n</form>\n<!-- Default form contact -->\n<!-- </div> -->\n</div>\n</div>\n\n\n<div class=\"emailSent\" *ngIf=\"emailSent == true\">\n<h4 >Your message has been sent successfully We will contact you shortly</h4>\n<h5><a routerLink=\"\"> Return to home page</a></h5>\n</div>\n</div>"
+module.exports = "<div class=\"container\">\n<div class=\"row justify-content-md-center\" *ngIf=\"emailSent == false\">\n    <!-- <div class=\"d-flex align-content-center flex-wrap col-md-6 mt-md-0 mt-3\">\n        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquam ante rutrum, iaculis purus iaculis, imperdiet erat. Suspendisse libero ante, faucibus in ex id, pharetra efficitur nisi. Pellentesque mattis mi velit, eu ultrices sem malesuada sed. Suspendisse laoreet magna tincidunt, imperdiet massa a, consectetur leo. Sed eleifend consectetur auctor. Nam varius rhoncus volutpat.</p>\n    </div>\n  \n  <div class=\"col-md-6 mt-md-0 mt-3\"> -->\n\n  \n  \n<div class=\"col-md-6\">\n<!-- Default form contact -->\n<form [formGroup]=\"messageEdit\" class=\"text-center  p-5\" >\n\n  <p class=\"h1 mb-4\">Talk to me</p>\n\n  <!-- Name -->\n \n  <input formControlName=\"name\" type=\"text\" id=\"defaultContactFormName\" class=\"form-control mb-4\" placeholder=\"Name\">\n  \n  <!-- Email -->\n  <input formControlName=\"email\" mdbInputDirective type=\"email\" id=\"defaultContactFormEmail\" class=\"form-control mb-4\" placeholder=\"E-mail\">\n\n<!-- Name -->\n<input formControlName=\"title\" type=\"text\" id=\"defaultContactFormName\" class=\"form-control mb-4\" placeholder=\"Title\">\n  <!-- Message -->\n  <div class=\"form-group\">\n    <textarea  formControlName=\"text\" class=\"form-control rounded-0\" id=\"exampleFormControlTextarea2\" rows=\"6\" placeholder=\"Message\"></textarea>\n  </div>\n\n  <!-- Send button -->\n  <button (click)=\"sendMailHandler()\" class=\"btn btn-info btn-block\" type=\"button\" [disabled]=\"!messageEdit.valid\">Send</button>\n\n</form>\n<!-- Default form contact -->\n<!-- </div> -->\n</div>\n</div>\n\n\n<div class=\"emailSent\" *ngIf=\"emailSent == true\">\n<h4 >Your message has been sent successfully We will contact you shortly</h4>\n<h5><a routerLink=\"\"> Return to home page</a></h5>\n</div>\n</div>"
 
 /***/ }),
 
@@ -541,7 +539,7 @@ module.exports = "<div class=\"container\">\n<div class=\"row justify-content-md
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".emailSent {\n  text-align: center;\n  padding: 70px 0; }\n"
+module.exports = ".emailSent {\n  text-align: center;\n  padding: 70px 0; }\n\np {\n  font-family: 'Caveat', cursive; }\n\ninput {\n  font-family: 'Roboto', sans-serif; }\n"
 
 /***/ }),
 
@@ -580,10 +578,8 @@ var ContactCardComponent = /** @class */ (function () {
         this.message = new _Message__WEBPACK_IMPORTED_MODULE_1__["Message"]();
         this.messageEdit = fb.group({
             name: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.message.name, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]),
-            phoneNumber: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.message.phoneNumber, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im)]),
-            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.message.email, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
+            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.message.email, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
             title: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.message.title, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]),
-            subject: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.message.title, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]),
             text: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.message.text, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]),
         });
     }
