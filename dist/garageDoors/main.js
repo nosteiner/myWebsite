@@ -453,15 +453,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
-/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/contact/contact.component */ "./src/app/components/contact/contact.component.ts");
-/* harmony import */ var _components_map_map_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/map/map.component */ "./src/app/components/map/map.component.ts");
-/* harmony import */ var _components_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/gallery/gallery.component */ "./src/app/components/gallery/gallery.component.ts");
-/* harmony import */ var _components_contact_card_contact_card_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/contact-card/contact-card.component */ "./src/app/components/contact-card/contact-card.component.ts");
+/* harmony import */ var _nicky_lenaers_ngx_scroll_to__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @nicky-lenaers/ngx-scroll-to */ "./node_modules/@nicky-lenaers/ngx-scroll-to/fesm5/nicky-lenaers-ngx-scroll-to.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
+/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
+/* harmony import */ var _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/contact/contact.component */ "./src/app/components/contact/contact.component.ts");
+/* harmony import */ var _components_map_map_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/map/map.component */ "./src/app/components/map/map.component.ts");
+/* harmony import */ var _components_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/gallery/gallery.component */ "./src/app/components/gallery/gallery.component.ts");
+/* harmony import */ var _components_contact_card_contact_card_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/contact-card/contact-card.component */ "./src/app/components/contact-card/contact-card.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -484,33 +485,35 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
-                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_9__["FooterComponent"],
-                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_10__["NavbarComponent"],
-                _components_home_home_component__WEBPACK_IMPORTED_MODULE_11__["HomeComponent"],
-                _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_12__["ContactComponent"],
-                _components_map_map_component__WEBPACK_IMPORTED_MODULE_13__["MapComponent"],
-                _components_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_14__["GalleryComponent"],
-                _components_contact_card_contact_card_component__WEBPACK_IMPORTED_MODULE_15__["ContactCardComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
+                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_10__["FooterComponent"],
+                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_11__["NavbarComponent"],
+                _components_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"],
+                _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_13__["ContactComponent"],
+                _components_map_map_component__WEBPACK_IMPORTED_MODULE_14__["MapComponent"],
+                _components_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_15__["GalleryComponent"],
+                _components_contact_card_contact_card_component__WEBPACK_IMPORTED_MODULE_16__["ContactCardComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
                 angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_2__["MDBBootstrapModule"].forRoot(),
                 _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatButtonModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"],
+                _nicky_lenaers_ngx_scroll_to__WEBPACK_IMPORTED_MODULE_7__["ScrollToModule"].forRoot()
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -679,7 +682,7 @@ var ContactComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Footer -->\n<footer class=\"page-footer font-small blue pt-4\">\n\n  <!-- Footer Links -->\n  <div class=\"container text-center text-md-left\">\n\n    <!-- Grid row -->\n    <div class=\"row\">\n\n      <!-- Grid column -->\n      <div class=\"col-md-6 mt-md-0 mt-3 pl-4\">\n\n         <!-- Content -->\n        <h5 class=\"text-uppercase\">Our Location</h5>\n        <!-- <p>Here you can use rows and columns here to organize your footer content.</p>  -->\n\n      <app-map></app-map>\n\n      </div>\n      <!-- Grid column -->\n\n      <hr class=\"clearfix w-100 d-md-none pb-3\">\n\n      <!-- Grid column -->\n      <div class=\"col-md-3 mb-md-0 mb-3 \">\n\n          <!-- Links -->\n          <h5 class=\"text-uppercase\">Links</h5>\n\n          <ul class=\"list-unstyled\">\n            <li>\n              <a href=\"#!\">Link 1</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 2</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 3</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 4</a>\n            </li>\n          </ul>\n\n        </div>\n        <!-- Grid column -->\n\n        <!-- Grid column -->\n        <div class=\"col-md-3 mb-md-0 mb-3\">\n\n          <!-- Links -->\n          <h5 class=\"text-uppercase\">Contact Info</h5>\n\n          <ul class=\"list-unstyled\">\n            <li>\n              compeny name\n            </li>\n            <li>\n              street\n            </li>\n            <li>\n              state\n            </li>\n            <li>\n             phone number\n            </li>\n            <li>\n              e-mail\n             </li>\n          </ul>\n\n        </div>\n        <!-- Grid column -->\n\n    </div>\n    <!-- Grid row -->\n\n  </div>\n  <!-- Footer Links -->\n\n  <!-- Copyright -->\n  <div class=\"footer-copyright text-center py-3\">© 2018 Copyright: GarageDoors</div>\n  <!-- Copyright -->\n\n</footer>\n<!-- Footer -->"
+module.exports = "<!-- Footer -->\n<footer class=\"page-footer font-small pink darken-4 pt-4\">\n\n  <!-- Footer Links -->\n  <div class=\"container text-center text-md-left\">\n\n    <!-- Grid row -->\n    <div class=\"row\">\n\n      <!-- Grid column -->\n      <div class=\"col-md-6 mt-md-0 mt-3 pl-4\">\n\n         <!-- Content -->\n        <h5 class=\"text-uppercase\">Our Location</h5>\n        <!-- <p>Here you can use rows and columns here to organize your footer content.</p>  -->\n\n     \n\n      </div>\n      <!-- Grid column -->\n\n      <hr class=\"clearfix w-100 d-md-none pb-3\">\n\n      <!-- Grid column -->\n      <div class=\"col-md-3 mb-md-0 mb-3 \">\n\n          <!-- Links -->\n          <h5 class=\"text-uppercase\">Links</h5>\n\n          <ul class=\"list-unstyled\">\n            <li>\n              <a href=\"#!\">Link 1</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 2</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 3</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 4</a>\n            </li>\n          </ul>\n\n        </div>\n        <!-- Grid column -->\n\n        <!-- Grid column -->\n        <div class=\"col-md-3 mb-md-0 mb-3\">\n\n          <!-- Links -->\n          <h5 class=\"text-uppercase\">Contact Info</h5>\n\n          <ul class=\"list-unstyled\">\n            <li>\n              compeny name\n            </li>\n            <li>\n              street\n            </li>\n            <li>\n              state\n            </li>\n            <li>\n             phone number\n            </li>\n            <li>\n              e-mail\n             </li>\n          </ul>\n\n        </div>\n        <!-- Grid column -->\n\n    </div>\n    <!-- Grid row -->\n\n  </div>\n  <!-- Footer Links -->\n\n  <!-- Copyright -->\n  <div class=\"footer-copyright text-center py-3\">© 2018 Copyright: NoamSteiner</div>\n  <!-- Copyright -->\n\n</footer>\n<!-- Footer -->"
 
 /***/ }),
 
@@ -805,7 +808,7 @@ var GalleryComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "    <!-- Main -->\n    <header class=\"h-100\">\n    <div class=\"view\">\n      <div class=\"full-bg-img\">\n          <div class=\"mask rgba-black-light flex-center\">\n              <div class=\"container text-center white-text\">\n                  <div class=\"white-text text-center wow fadeInUp\">\n                      <h2>Lorem ipsum dolor sit amet</h2>\n                                 \n                      <h5>Ut enim ad minim veniam, quis nostrud exercitation</h5>\n                      <br>\n                      <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>\n                  </div>\n              </div>\n          </div>\n      </div>\n  </div>\n  <!-- /.Main -->\n</header>\n<!--Main Layout-->\n<main class=\"text-center py-5\">\n\n  <div class=\"container\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n\n              <p align=\"justify\">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis\n                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur\n                  sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\n                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip\n                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore\n                  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt\n                  mollit anim id est laborum.</p>\n\n          </div>\n      </div>\n  </div>\n  <button mat-fab color=\"warn\" id=\"fixedbutton\"><a href=\"tel:+972525599200\"> <i class=\"fa fa-2x fa-phone white-text\" aria-hidden=\"true\"></i></a></button>\n</main>\n<!--Main Layout-->"
+module.exports = "    <!-- Main -->\n    <header class=\"h-100\">\n    <div class=\"view jarallax\" data-jarallax='{\"speed\": 0.2}'>\n      <div class=\"full-bg-img\">\n          <div class=\"mask rgba-black-strong flex-center\">\n              <div class=\"container text-center white-text\">\n                  <div class=\"white-text text-center animated bounceInLeft\">\n                      <h1>AHOY!</h1>\n                                 \n                      <h3>Welcome Abord</h3>\n                      <br>\n                      <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>\n                  </div>\n              </div>\n          </div>\n      </div>\n  </div>\n  <!-- /.Main -->\n</header>\n<!--Main Layout-->\n<main class=\"text-center py-5\" id=\"aboutMe\" #destinationRef>\n\n  <div class=\"container\">\n      <div class=\"row\">\n          <div class=\"col-md-12\"  >\n\n              <p align=\"justify\">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis\n                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur\n                  sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\n                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip\n                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore\n                  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt\n                  mollit anim id est laborum.</p>\n\n          </div>\n      </div>\n  </div>\n  <!-- <button mat-fab color=\"warn\" id=\"fixedbutton\"><a href=\"tel:+972525599200\"> <i class=\"fa fa-2x fa-phone white-text\" aria-hidden=\"true\"></i></a></button> -->\n</main>\n<!--Main Layout-->"
 
 /***/ }),
 
@@ -816,7 +819,7 @@ module.exports = "    <!-- Main -->\n    <header class=\"h-100\">\n    <div clas
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".view {\n  background: url(\"https://legacygaragedoorsbc.com/wp-content/uploads/2016/10/Legacy_Garage_Doors_Kelowna_Aluminum_Esteem.jpg\") no-repeat center center;\n  background-size: cover;\n  height: 100vh; }\n\n#fixedbutton {\n  position: fixed;\n  bottom: 40px;\n  right: 40px; }\n"
+module.exports = ".view {\n  background: url('boats.jpg') repeat center center;\n  height: 100vh; }\n\n#fixedbutton {\n  position: fixed;\n  bottom: 40px;\n  right: 40px; }\n\n* {\n  font-family: 'Megrim', cursive; }\n"
 
 /***/ }),
 
@@ -909,7 +912,7 @@ var MapComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n    <mdb-navbar SideClass=\"navbar  navbar-expand-lg navbar-dark indigo scrolling-navbar intro-fixed-nav\" [containerInside]=\"false\">\n        <mdb-navbar-brand>\n            <a class=\"logo navbar-brand\" href=\"#\"><strong>Garage Doors</strong></a>\n        </mdb-navbar-brand>\n        <links>\n            <ul class=\"navbar-nav mr-auto\">\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" routerLink=\"\">Home</a>\n                </li>\n                <!-- Dropdown -->\n                <li class=\"nav-item dropdown\" dropdown>\n                    <a dropdownToggle mdbWavesEffect type=\"button\" class=\"nav-link dropdown-toggle waves-light\" mdbWavesEffect>\n                        Services<span class=\"caret\"></span></a>\n                    <div *dropdownMenu class=\"dropdown-menu dropdown dropdown-primary\" role=\"menu\">\n                        <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"installation\">Installation</a>\n                        <a class=\"dropdown-item waves-light\" mdbWavesEffect routerLink=\"repair\">Repair</a>\n                    </div>\n                </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" routerLink=\"gallery\">Gallery</a>\n                </li>\n                <li class=\"nav-item waves-light float-right\" mdbWavesEffect>\n                    <a class=\"nav-link\" routerLink=\"contact\" >Contact</a>\n                </li>\n            </ul>\n        </links>\n    </mdb-navbar>\n"
+module.exports = "\n    <mdb-navbar SideClass=\"navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav\" [containerInside]=\"false\">\n           \n        <links>\n            <ul class=\"navbar-nav mr-auto\">\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#aboutMe'\">Home</a>\n              \n                </li>\n                \n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" routerLink=\"gallery\">Gallery</a>\n                </li>\n                <li class=\"nav-item waves-light float-right\" mdbWavesEffect>\n                    <a class=\"nav-link\" routerLink=\"contact\" >Contact</a>\n                </li>\n            </ul>\n        </links>\n    </mdb-navbar>\n"
 
 /***/ }),
 
@@ -920,7 +923,7 @@ module.exports = "\n    <mdb-navbar SideClass=\"navbar  navbar-expand-lg navbar-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".navbar {\n  background-color: transparent; }\n"
 
 /***/ }),
 

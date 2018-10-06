@@ -23,6 +23,7 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "@nicky-lenaers/ngx-scroll-to": "^1.1.1",
     "@types/chart.js": "^2.7.36",
     "angular-bootstrap-md": "^6.2.4",
     "angular5-csv": "^0.2.10",
