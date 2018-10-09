@@ -1,19 +1,25 @@
 
-    <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" [containerInside]="false">
+    <mdb-navbar SideClass="navbar z-depth-0 fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" [containerInside]="false">
            
         <links>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item waves-light" mdbWavesEffect>
-                    <a class="nav-link" [ngx-scroll-to]="'#aboutMe'">Home</a>
+                    <a class="nav-link" [ngx-scroll-to]="'#aboutMe'">About</a>
               
                 </li>
                 
                 <li class="nav-item waves-light" mdbWavesEffect>
-                    <a class="nav-link" routerLink="gallery">Gallery</a>
+                    <a class="nav-link" [ngx-scroll-to]="'#technologies'">Technologies</a>
+                </li>
+                <li class="nav-item waves-light" mdbWavesEffect>
+                        <a class="nav-link" [ngx-scroll-to]="'#portfolio'">Portfolio</a>
+                    </li>
+                <li class="nav-item waves-light float-right" mdbWavesEffect>
+                    <a class="nav-link" [ngx-scroll-to]="'#contact'" >Contact</a>
                 </li>
                 <li class="nav-item waves-light float-right" mdbWavesEffect>
-                    <a class="nav-link" routerLink="contact" >Contact</a>
-                </li>
+                        <a class="nav-link" href="assets/NoamSteinerCV.docx" download>CV</a>
+                    </li>
             </ul>
         </links>
     </mdb-navbar>

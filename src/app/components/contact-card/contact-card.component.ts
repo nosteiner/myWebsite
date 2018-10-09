@@ -18,12 +18,12 @@ export class ContactCardComponent implements OnInit {
     this.message = new Message();
 
     this.messageEdit = fb.group({
-      name: new FormControl(this.message.name, [Validators.required]),
+      name: new FormControl(this.message.name),
      
-      email: new FormControl(this.message.email, [ Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
-      title: new FormControl(this.message.title, [Validators.required]),
+      email: new FormControl(this.message.email),
+      title: new FormControl(this.message.title),
      
-      text: new FormControl(this.message.text, [Validators.required]),
+      text: new FormControl(this.message.text),
     });
   }
 

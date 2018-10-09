@@ -7,11 +7,24 @@ p{
     font-family: 'Caveat', cursive;
 }
 input{
-
-    font-family: 'Roboto', sans-serif;
+    
+    font-family: 'Open Sans', sans-serif;
 
 }
 
+input.ng-invalid.ng-touched {
+    border: 2px solid #d89db7;
+  }
+
+  .ng-valid{
+    border: 2px solid #dfdcac;
+  }
+  
+//   input:valid {
+//     border: 2px solid #ddffdd;
+//   }
+  
+ 
 
 
 

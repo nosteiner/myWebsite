@@ -1,16 +1,31 @@
 .view {
-
     background: url("src/assets/boats.jpg") repeat center center;
- 
     height: 100vh;
 }
 
-#fixedbutton {
-    position: fixed;
-    bottom: 40px;
-    right: 40px; 
+img {
+    border-radius: 50%;
+  
+    object-fit: cover;
+
+    // width: 300px;
+    // height: 337px;
+   
 }
 
-*{
+// #fixedbutton {
+//     position: fixed;
+//     bottom: 40px;
+//     right: 40px; 
+// }
+
+.intro{
     font-family: 'Megrim', cursive;
+}
+.about{
+    font-family: 'Open Sans', sans-serif;
+}
+.vertical-center{
+    display: flex;
+    align-items: center;
 }
