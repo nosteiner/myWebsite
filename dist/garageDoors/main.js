@@ -539,7 +539,7 @@ module.exports = "<div class=\"container\" id=\"contact\">\n  <div class=\"row j
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".emailSent {\n  text-align: center;\n  padding: 70px 0; }\n\np {\n  font-family: 'Caveat', cursive; }\n\ninput {\n  font-family: 'Open Sans', sans-serif; }\n\ninput.ng-invalid.ng-touched {\n  border: 2px solid #d89db7; }\n\n.ng-valid {\n  border: 2px solid #dfdcac; }\n"
+module.exports = ".emailSent {\n  text-align: center;\n  padding: 70px 0; }\n\np {\n  font-family: 'Caveat', cursive; }\n\ninput {\n  font-family: 'Open Sans', sans-serif; }\n\ninput.ng-invalid.ng-touched {\n  border: 2px solid #d89db7; }\n\ninput.ng-valid {\n  border: 2px solid #dfdcac; }\n"
 
 /***/ }),
 
