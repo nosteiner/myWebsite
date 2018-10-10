@@ -32,7 +32,7 @@
 
 
   <div class="emailSent" *ngIf="emailSent == true">
-    <h4>Your message has been sent successfully We will contact you shortly</h4>
-    <h5><a routerLink=""> Return to home page</a></h5>
+      <h4>Your message was sent successfully </h4>
+      <a class="sendAnotherOne green-text" (click)="changeStatus(false)">Send another one!</a>
   </div>
 </div>

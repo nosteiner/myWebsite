@@ -2,7 +2,12 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import url('https://fonts.googleapis.com/css?family=Caveat|Megrim|Open+Sans');
 
-.top-nav-collapse ul li a {color: black !important;}
+.top-nav-collapse a {color: black !important;
+ 
+ }
+
+
+
 .top-nav-collapse{
     background-color: white;
 }

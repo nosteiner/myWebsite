@@ -16,7 +16,6 @@ export class ContactCardComponent implements OnInit {
   emailSent: boolean = false;
   constructor(private contactService: ContactService, private fb: FormBuilder) {
     this.message = new Message();
-
     this.messageEdit = fb.group({
       name: new FormControl(this.message.name),
      
@@ -34,8 +33,15 @@ export class ContactCardComponent implements OnInit {
     console.log(this.messageEdit.value)
     this.message.edit(this.messageEdit.value)
     this.contactService.sendEmail(this.message).subscribe(() => {
-      this.emailSent = true;
+      this.messageEdit.reset()
+
+      this.changeStatus(true)
     
     })
+  }
+
+  changeStatus(bool){
+    this.emailSent = bool
+
   }
 }

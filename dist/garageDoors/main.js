@@ -528,7 +528,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" id=\"contact\">\n  <div class=\"row justify-content-md-center\" *ngIf=\"emailSent == false\">\n\n    <div class=\"col-md-6\">\n      <!-- Default form contact -->\n      <form [formGroup]=\"messageEdit\" class=\"text-center p-5\">\n\n        <p class=\"h1 mb-4\">Talk to me</p>\n\n        <!-- Name -->\n        <input formControlName=\"name\" type=\"text\" id=\"formControl\" class=\"form-control mb-4\" placeholder=\"Name\" required>\n\n        <!-- Email -->\n        <input formControlName=\"email\" type=\"email\" id=\"formControl\" class=\"form-control mb-4\" placeholder=\"E-mail\"  required>\n\n        <!-- Name -->\n        <input formControlName=\"title\" type=\"text\" id=\"formControl\" class=\"form-control mb-4\" placeholder=\"Title\" required>\n        <!-- Message -->\n        <div class=\"form-group\">\n          <textarea formControlName=\"text\" class=\"form-control rounded-1\" id=\"formControl\" rows=\"6\" placeholder=\"Message\" required></textarea>\n        </div>\n\n        <!-- Send button -->\n        <button mdbBtn color=\"unique\" (click)=\"sendMailHandler()\" class=\"btn btn-info btn-block\" type=\"button\"\n          [disabled]=\"!messageEdit.valid\">Send</button>\n\n      </form>\n      <!-- Default form contact -->\n      <!-- </div> -->\n    </div>\n  </div>\n\n\n  <div class=\"emailSent\" *ngIf=\"emailSent == true\">\n    <h4>Your message has been sent successfully We will contact you shortly</h4>\n    <h5><a routerLink=\"\"> Return to home page</a></h5>\n  </div>\n</div>"
+module.exports = "<div class=\"container\" id=\"contact\">\n  <div class=\"row justify-content-md-center\" *ngIf=\"emailSent == false\">\n\n    <div class=\"col-md-6\">\n      <!-- Default form contact -->\n      <form [formGroup]=\"messageEdit\" class=\"text-center p-5\">\n\n        <p class=\"h1 mb-4\">Talk to me</p>\n\n        <!-- Name -->\n        <input formControlName=\"name\" type=\"text\" id=\"formControl\" class=\"form-control mb-4\" placeholder=\"Name\" required>\n\n        <!-- Email -->\n        <input formControlName=\"email\" type=\"email\" id=\"formControl\" class=\"form-control mb-4\" placeholder=\"E-mail\"  required>\n\n        <!-- Name -->\n        <input formControlName=\"title\" type=\"text\" id=\"formControl\" class=\"form-control mb-4\" placeholder=\"Title\" required>\n        <!-- Message -->\n        <div class=\"form-group\">\n          <textarea formControlName=\"text\" class=\"form-control rounded-1\" id=\"formControl\" rows=\"6\" placeholder=\"Message\" required></textarea>\n        </div>\n\n        <!-- Send button -->\n        <button mdbBtn color=\"unique\" (click)=\"sendMailHandler()\" class=\"btn btn-info btn-block\" type=\"button\"\n          [disabled]=\"!messageEdit.valid\">Send</button>\n\n      </form>\n      <!-- Default form contact -->\n      <!-- </div> -->\n    </div>\n  </div>\n\n\n  <div class=\"emailSent\" *ngIf=\"emailSent == true\">\n      <h4>Your message was sent successfully </h4>\n      <a class=\"sendAnotherOne green-text\" (click)=\"changeStatus(false)\">Send another one!</a>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -539,7 +539,7 @@ module.exports = "<div class=\"container\" id=\"contact\">\n  <div class=\"row j
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".emailSent {\n  text-align: center;\n  padding: 70px 0; }\n\np {\n  font-family: 'Caveat', cursive; }\n\ninput {\n  font-family: 'Open Sans', sans-serif; }\n\ninput.ng-invalid.ng-touched {\n  border: 2px solid #d89db7; }\n\ninput.ng-valid {\n  border: 2px solid #dfdcac; }\n"
+module.exports = ".emailSent {\n  text-align: center;\n  padding: 70px 0; }\n\np {\n  font-family: 'Caveat', cursive; }\n\ninput {\n  font-family: 'Open Sans', sans-serif; }\n\ninput.ng-invalid.ng-touched {\n  border: 2px solid #d89db7; }\n\ninput.ng-valid {\n  border: 2px solid #dfdcac; }\n\n.sendAnotherOne:hover {\n  text-shadow: 1px 1px black; }\n"
 
 /***/ }),
 
@@ -590,8 +590,12 @@ var ContactCardComponent = /** @class */ (function () {
         console.log(this.messageEdit.value);
         this.message.edit(this.messageEdit.value);
         this.contactService.sendEmail(this.message).subscribe(function () {
-            _this.emailSent = true;
+            _this.messageEdit.reset();
+            _this.changeStatus(true);
         });
+    };
+    ContactCardComponent.prototype.changeStatus = function (bool) {
+        this.emailSent = bool;
     };
     ContactCardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -908,7 +912,7 @@ var MapComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n    <mdb-navbar SideClass=\"navbar z-depth-0 fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav\" [containerInside]=\"false\">\n           \n        <links>\n            <ul class=\"navbar-nav mr-auto\">\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#aboutMe'\">About</a>\n              \n                </li>\n                \n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#technologies'\">Technologies</a>\n                </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                        <a class=\"nav-link\" [ngx-scroll-to]=\"'#portfolio'\">Portfolio</a>\n                    </li>\n                <li class=\"nav-item waves-light float-right\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#contact'\" >Contact</a>\n                </li>\n                <li class=\"nav-item waves-light float-right\" mdbWavesEffect>\n                        <a class=\"nav-link\" href=\"assets/NoamSteinerCV.docx\" download>CV</a>\n                    </li>\n            </ul>\n        </links>\n    </mdb-navbar>\n"
+module.exports = "\n    <mdb-navbar SideClass=\"navbar z-depth-0 fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav\" [containerInside]=\"false\">\n           \n        <links>\n            <ul class=\"navbar-nav mr-auto\">\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#aboutMe'\">About</a>\n              \n                </li>\n                \n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#technologies'\">Technologies</a>\n                </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                        <a class=\"nav-link\" [ngx-scroll-to]=\"'#portfolio'\">Portfolio</a>\n                    </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#contact'\" >Contact</a>\n                </li>\n\n            </ul>\n           \n            <div class=\"nav-item waves-light float-right\" mdbWavesEffect>\n                    <a class=\"nav-link CV \" style=\"color:white\" href=\"assets/NoamSteinerCV.docx\" download><i class=\"fa fa-download\" aria-hidden=\"true\"></i> Download CV</a>\n            </div>\n            \n        </links>\n    </mdb-navbar>\n"
 
 /***/ }),
 
@@ -919,7 +923,7 @@ module.exports = "\n    <mdb-navbar SideClass=\"navbar z-depth-0 fixed-top navba
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".navbar {\n  background-color: transparent; }\n"
+module.exports = ".navbar {\n  background-color: transparent; }\n\n.CV {\n  border: 1px white solid; }\n"
 
 /***/ }),
 
