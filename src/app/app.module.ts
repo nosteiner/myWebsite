@@ -14,9 +14,6 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { MapComponent } from './components/map/map.component';
-import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
 
 
@@ -26,9 +23,6 @@ import { ContactCardComponent } from './components/contact-card/contact-card.com
     FooterComponent,
     NavbarComponent,
     HomeComponent,
-    ContactComponent,
-    MapComponent,
-    GalleryComponent,
     ContactCardComponent
   ],
   imports: [

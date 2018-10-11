@@ -342,8 +342,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/contact/contact.component */ "./src/app/components/contact/contact.component.ts");
-/* harmony import */ var _components_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/gallery/gallery.component */ "./src/app/components/gallery/gallery.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -353,12 +351,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
-
 var routes = [
     { path: '', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
-    { path: 'contact', component: _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_3__["ContactComponent"] },
-    { path: 'gallery', component: _components_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_4__["GalleryComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -459,19 +453,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
 /* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
 /* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/contact/contact.component */ "./src/app/components/contact/contact.component.ts");
-/* harmony import */ var _components_map_map_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/map/map.component */ "./src/app/components/map/map.component.ts");
-/* harmony import */ var _components_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/gallery/gallery.component */ "./src/app/components/gallery/gallery.component.ts");
-/* harmony import */ var _components_contact_card_contact_card_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/contact-card/contact-card.component */ "./src/app/components/contact-card/contact-card.component.ts");
+/* harmony import */ var _components_contact_card_contact_card_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/contact-card/contact-card.component */ "./src/app/components/contact-card/contact-card.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
 
 
 
@@ -497,10 +485,7 @@ var AppModule = /** @class */ (function () {
                 _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_11__["FooterComponent"],
                 _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_12__["NavbarComponent"],
                 _components_home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"],
-                _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_14__["ContactComponent"],
-                _components_map_map_component__WEBPACK_IMPORTED_MODULE_15__["MapComponent"],
-                _components_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_16__["GalleryComponent"],
-                _components_contact_card_contact_card_component__WEBPACK_IMPORTED_MODULE_17__["ContactCardComponent"]
+                _components_contact_card_contact_card_component__WEBPACK_IMPORTED_MODULE_14__["ContactCardComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -616,69 +601,6 @@ var ContactCardComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/contact/contact.component.html":
-/*!***********************************************************!*\
-  !*** ./src/app/components/contact/contact.component.html ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n<app-contact-card></app-contact-card>\n\n"
-
-/***/ }),
-
-/***/ "./src/app/components/contact/contact.component.scss":
-/*!***********************************************************!*\
-  !*** ./src/app/components/contact/contact.component.scss ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/components/contact/contact.component.ts":
-/*!*********************************************************!*\
-  !*** ./src/app/components/contact/contact.component.ts ***!
-  \*********************************************************/
-/*! exports provided: ContactComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactComponent", function() { return ContactComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ContactComponent = /** @class */ (function () {
-    function ContactComponent() {
-    }
-    ContactComponent.prototype.ngOnInit = function () {
-    };
-    ContactComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-contact',
-            template: __webpack_require__(/*! ./contact.component.html */ "./src/app/components/contact/contact.component.html"),
-            styles: [__webpack_require__(/*! ./contact.component.scss */ "./src/app/components/contact/contact.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], ContactComponent);
-    return ContactComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/components/footer/footer.component.html":
 /*!*********************************************************!*\
   !*** ./src/app/components/footer/footer.component.html ***!
@@ -686,7 +608,7 @@ var ContactComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- technologies -->\n<!-- <div class=\"row  d-flex justify-content-center p-3\">\n  <div class=\"img-container mx-2\">\n    <img src=\"assets/icons/angular.png\">\n  </div>\n  <div class=\"img-container mx-2\"> <img src=\"assets/icons/html.png\">\n  </div>\n  <div class=\"img-container mx-2\"> <img src=\"assets/icons/css.png\">\n  </div>\n  <div class=\"img-container mx-2\">\n    <img src=\"assets/icons/es6.png\">\n  </div>\n  <div class=\"img-container mx-2\">\n    <img src=\"assets/icons/bootstrap.png\">\n  </div>\n  <div class=\"img-container p-1\">\n\n    <img src=\"assets/icons/nodejs.png\">\n  </div>\n\n\n  <div class=\"img-container\">\n    <img src=\"assets/icons/mongodb.png\">\n  </div>\n  <div class=\"img-container\">\n    <img src=\"assets/icons/mysql.png\">\n  </div>\n  <div class=\"img-container\">\n    <img src=\"assets/icons/heroku.png\">\n  </div>\n  <div class=\"img-container\">\n    <img src=\"assets/icons/jquery.png\">\n  </div>\n</div> -->\n\n<!-- Footer -->\n<footer class=\"page-footer font-small pink darken-4 pt-4\">\n\n  <!-- Footer Links -->\n  <div class=\"container text-center text-md-left\">\n\n    <!-- Grid row -->\n    <div class=\"row\">\n\n      <!-- Grid column -->\n      <div class=\"col-md-12 py-5\">\n        <div class=\"mb-5 flex-center\">\n\n          <a class=\"fb-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"mailto:no.steiner@gmail.com\">\n            <mdb-icon icon=\"envelope\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\n          </a>\n          <!-- Slack -->\n          <a class=\"fb-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://wa.me/9720525599200\">\n            <mdb-icon icon=\"whatsapp\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\n          </a>\n          <!-- Github -->\n          <a class=\"tw-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/nosteiner\">\n            <mdb-icon icon=\"github\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\n          </a>\n          <!--Linkedin -->\n          <a class=\"li-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.linkedin.com/in/noamsteiner/\">\n            <mdb-icon icon=\"linkedin\" size=\"2x\" class=\"white-text\"></mdb-icon>\n          </a>\n\n        </div>\n      </div>\n      <!-- Grid column -->\n\n    </div>\n    <!-- Grid row -->\n\n  </div>\n  <!-- Footer Links -->\n\n  <!-- Copyright -->\n  <div class=\"footer-copyright text-center py-3\">© 2018 Copyright: NoamSteiner</div>\n  <!-- Copyright -->\n\n</footer>\n<!-- Footer -->"
+module.exports = "\n<!-- Footer -->\n<footer class=\"page-footer font-small pink darken-4 pt-4\">\n\n  <!-- Footer Links -->\n  <div class=\"container text-center text-md-left\">\n\n    <!-- Grid row -->\n    <div class=\"row\">\n\n      <!-- Grid column -->\n      <div class=\"col-md-12 py-5\">\n        <div class=\"mb-5 flex-center\">\n\n          <a class=\"fb-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"mailto:no.steiner@gmail.com\">\n            <mdb-icon icon=\"envelope\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\n          </a>\n          <!-- Slack -->\n          <a class=\"fb-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://wa.me/9720525599200\">\n            <mdb-icon icon=\"whatsapp\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\n          </a>\n          <!-- Github -->\n          <a class=\"tw-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/nosteiner\">\n            <mdb-icon icon=\"github\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\n          </a>\n          <!--Linkedin -->\n          <a class=\"li-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.linkedin.com/in/noamsteiner/\">\n            <mdb-icon icon=\"linkedin\" size=\"2x\" class=\"white-text\"></mdb-icon>\n          </a>\n\n        </div>\n      </div>\n      <!-- Grid column -->\n\n    </div>\n    <!-- Grid row -->\n\n  </div>\n  <!-- Footer Links -->\n\n  <!-- Copyright -->\n  <div class=\"footer-copyright text-center py-3\">© 2018 Copyright: NoamSteiner</div>\n  <!-- Copyright -->\n\n</footer>\n<!-- Footer -->"
 
 /***/ }),
 
@@ -742,69 +664,6 @@ var FooterComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/gallery/gallery.component.html":
-/*!***********************************************************!*\
-  !*** ./src/app/components/gallery/gallery.component.html ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!--Carousel Wrapper-->\n<mdb-carousel [isControls]=\"true\" class=\"carousel slide carousel-fade\" [animation]=\"'fade'\">\n    <!--First slide-->\n    <mdb-carousel-item>\n      <div class=\"view w-100\">\n        <img class=\"d-block w-100\" src=\"https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg\" alt=\"First slide\">\n        <div class=\"mask rgba-black-light waves-light\" mdbWavesEffect></div>\n      </div>\n      <div class=\"carousel-caption\">\n        <h3 class=\"h3-responsive\">Light mask</h3>\n        <p>First text</p>\n      </div>\n    </mdb-carousel-item>\n    <!--/First slide-->\n    <!--Second slide-->\n    <mdb-carousel-item>\n      <div class=\"view w-100\">\n        <img class=\"d-block w-100\" src=\"https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg\" alt=\"Second slide\">\n        <div class=\"mask rgba-black-strong waves-light\" mdbWavesEffect></div>\n      </div>\n      <div class=\"carousel-caption\">\n        <h3 class=\"h3-responsive\">Strong mask</h3>\n        <p>Secondary text</p>\n      </div>\n    </mdb-carousel-item>\n    <!--/Second slide-->\n    <!--Third slide-->\n    <mdb-carousel-item>\n      <div class=\"view w-100\">\n        <img class=\"d-block w-100\" src=\"https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg\" alt=\"Third slide\">\n        <div class=\"mask rgba-black-slight waves-light\" mdbWavesEffect></div>\n      </div>\n      <div class=\"carousel-caption\">\n        <h3 class=\"h3-responsive\">Slight mask</h3>\n        <p>Third text</p>\n      </div>\n    </mdb-carousel-item>\n    <!--/Third slide-->\n  </mdb-carousel>\n  <!--/.Carousel Wrapper-->"
-
-/***/ }),
-
-/***/ "./src/app/components/gallery/gallery.component.scss":
-/*!***********************************************************!*\
-  !*** ./src/app/components/gallery/gallery.component.scss ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/components/gallery/gallery.component.ts":
-/*!*********************************************************!*\
-  !*** ./src/app/components/gallery/gallery.component.ts ***!
-  \*********************************************************/
-/*! exports provided: GalleryComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GalleryComponent", function() { return GalleryComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var GalleryComponent = /** @class */ (function () {
-    function GalleryComponent() {
-    }
-    GalleryComponent.prototype.ngOnInit = function () {
-    };
-    GalleryComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-gallery',
-            template: __webpack_require__(/*! ./gallery.component.html */ "./src/app/components/gallery/gallery.component.html"),
-            styles: [__webpack_require__(/*! ./gallery.component.scss */ "./src/app/components/gallery/gallery.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], GalleryComponent);
-    return GalleryComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/components/home/home.component.html":
 /*!*****************************************************!*\
   !*** ./src/app/components/home/home.component.html ***!
@@ -812,7 +671,7 @@ var GalleryComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Main -->\n<header class=\"h-100\">\n    <div class=\"view jarallax\" data-jarallax='{\"speed\": 0.2}'>\n        <div class=\"full-bg-img\">\n            <div class=\"mask rgba-black-strong flex-center\">\n                <div class=\"container text-center white-text\">\n                    <div class=\"intro white-text text-center animated bounceInLeft\">\n                        <h1>AHOY!</h1>\n                        <h3>Welcome Abord</h3>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <!-- /.Main -->\n</header>\n\n<!--Main Layout-->\n\n<div class=\"container\">\n    <div class=\"pt-3\" id=\"aboutMe\">\n\n        <div class=\"row pt-5 \">\n            <div class=\"col-md-4 pb-5 col flex-last center\">\n                <img src=\"assets/myself.jpg\">\n            </div>\n            <div class=\"col-md-8 vertical-center\">\n                <div>\n                    <h3>I'm Noam Steiner, a full Stack web developer.</h3>\n\n                    <p class=\"about\" align=\"justify\">\n                        I am currently developing mainly in Angular 6 but at the same time invests in learning\n                        additional\n                        technologies and frameworks. I currently work on a number of projects independently, so you can\n                        see\n                        my portfolio enriched all the time.\n                        <br>\n                        I would love to hear from you!</p>\n                </div>\n            </div>\n\n        </div>\n\n        <div class=\"row\" id=\"Technologies\">\n            <div class=\"col-md-12\">\n\n            </div>\n        </div>\n    </div>\n</div>\n<!-- <button mat-fab color=\"warn\" id=\"fixedbutton\"><a href=\"tel:+972525599200\"> <i class=\"fa fa-2x fa-phone white-text\" aria-hidden=\"true\"></i></a></button> -->\n\n<!--Main Layout-->"
+module.exports = "<!-- Main -->\n<header class=\"h-100\">\n    <div class=\"view jarallax\" data-jarallax='{\"speed\": 0.2}'>\n        <div class=\"full-bg-img\">\n            <div class=\"mask rgba-black-strong flex-center\">\n                <div class=\"container text-center white-text\">\n                    <div class=\"intro white-text text-center animated bounceInLeft\">\n                        <h1>AHOY!</h1>\n                        <h3>Welcome Abord</h3>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <!-- /.Main -->\n</header>\n\n<!--Main Layout-->\n\n<div class=\"container\">\n    <div class=\"pt-3\" id=\"aboutMe\">\n\n        <div class=\"row pt-5 \">\n            <div class=\"col-md-4 pb-5 col flex-last center\">\n                <img src=\"assets/myself.jpg\">\n            </div>\n            <div class=\"col-md-8 vertical-center\">\n                <div>\n                    <h3>I'm Noam Steiner, a junior full Stack web developer.</h3>\n\n                    <p class=\"about\" align=\"justify\">\n                        I am currently developing mainly in Angular 6 but at the same time invests in learning\n                        additional\n                        technologies and frameworks. I currently work on a number of projects independently, so you can\n                        see\n                        my portfolio enriched all the time.\n                        <br>\n                        I would love to hear from you!</p>\n                </div>\n            </div>\n\n        </div>\n\n        <div class=\"row\" id=\"Technologies\">\n            <div class=\"col-md-12\">\n\n            </div>\n        </div>\n    </div>\n</div>\n<!-- <button mat-fab color=\"warn\" id=\"fixedbutton\"><a href=\"tel:+972525599200\"> <i class=\"fa fa-2x fa-phone white-text\" aria-hidden=\"true\"></i></a></button> -->\n\n<!--Main Layout-->"
 
 /***/ }),
 
@@ -862,47 +721,6 @@ var HomeComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], HomeComponent);
     return HomeComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/components/map/map.component.ts":
-/*!*************************************************!*\
-  !*** ./src/app/components/map/map.component.ts ***!
-  \*************************************************/
-/*! exports provided: MapComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapComponent", function() { return MapComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var MapComponent = /** @class */ (function () {
-    function MapComponent() {
-    }
-    MapComponent.prototype.ngOnInit = function () {
-    };
-    MapComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-map',
-            styles: [],
-            template: "\n  <div class=\"embed-responsive embed-responsive-4by3\">\n  <iframe class=\"embed-responsive-item\"  src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6738.95952944674!2d34.866171223597846!3d32.37949872437501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d14c6035ba37b%3A0xb4986a2660d611e!2sBeit+Herut!5e0!3m2!1sen!2sil!4v1538234667969\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>\n  </div>\n  "
-        }),
-        __metadata("design:paramtypes", [])
-    ], MapComponent);
-    return MapComponent;
 }());
 
 
