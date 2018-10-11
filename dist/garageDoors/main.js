@@ -452,15 +452,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _nicky_lenaers_ngx_scroll_to__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @nicky-lenaers/ngx-scroll-to */ "./node_modules/@nicky-lenaers/ngx-scroll-to/fesm5/nicky-lenaers-ngx-scroll-to.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
-/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/contact/contact.component */ "./src/app/components/contact/contact.component.ts");
-/* harmony import */ var _components_map_map_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/map/map.component */ "./src/app/components/map/map.component.ts");
-/* harmony import */ var _components_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/gallery/gallery.component */ "./src/app/components/gallery/gallery.component.ts");
-/* harmony import */ var _components_contact_card_contact_card_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/contact-card/contact-card.component */ "./src/app/components/contact-card/contact-card.component.ts");
+/* harmony import */ var ngx_gallery__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-gallery */ "./node_modules/ngx-gallery/bundles/ngx-gallery.umd.js");
+/* harmony import */ var ngx_gallery__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(ngx_gallery__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
+/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
+/* harmony import */ var _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/contact/contact.component */ "./src/app/components/contact/contact.component.ts");
+/* harmony import */ var _components_map_map_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/map/map.component */ "./src/app/components/map/map.component.ts");
+/* harmony import */ var _components_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/gallery/gallery.component */ "./src/app/components/gallery/gallery.component.ts");
+/* harmony import */ var _components_contact_card_contact_card_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/contact-card/contact-card.component */ "./src/app/components/contact-card/contact-card.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -484,34 +486,36 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
-                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_10__["FooterComponent"],
-                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_11__["NavbarComponent"],
-                _components_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"],
-                _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_13__["ContactComponent"],
-                _components_map_map_component__WEBPACK_IMPORTED_MODULE_14__["MapComponent"],
-                _components_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_15__["GalleryComponent"],
-                _components_contact_card_contact_card_component__WEBPACK_IMPORTED_MODULE_16__["ContactCardComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
+                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_11__["FooterComponent"],
+                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_12__["NavbarComponent"],
+                _components_home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"],
+                _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_14__["ContactComponent"],
+                _components_map_map_component__WEBPACK_IMPORTED_MODULE_15__["MapComponent"],
+                _components_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_16__["GalleryComponent"],
+                _components_contact_card_contact_card_component__WEBPACK_IMPORTED_MODULE_17__["ContactCardComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"],
                 angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_2__["MDBBootstrapModule"].forRoot(),
                 _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatButtonModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"],
-                _nicky_lenaers_ngx_scroll_to__WEBPACK_IMPORTED_MODULE_7__["ScrollToModule"].forRoot()
+                _nicky_lenaers_ngx_scroll_to__WEBPACK_IMPORTED_MODULE_7__["ScrollToModule"].forRoot(),
+                ngx_gallery__WEBPACK_IMPORTED_MODULE_8__["NgxGalleryModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -682,7 +686,7 @@ var ContactComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Footer -->\n<footer class=\"page-footer font-small pink darken-4 pt-4\">\n\n  <!-- Footer Links -->\n  <div class=\"container text-center text-md-left\">\n\n    <!-- Grid row -->\n    <div class=\"row\">\n\n      <!-- Grid column -->\n      <div class=\"col-md-12 py-5\">\n          <div class=\"mb-5 flex-center\">\n\n              <a class=\"fb-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"mailto:no.steiner@gmail.com\">\n                <mdb-icon icon=\"envelope\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\n              </a>\n            <!-- Slack -->\n            <a class=\"fb-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://wa.me/9720525599200\">\n              <mdb-icon icon=\"whatsapp\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\n            </a>\n            <!-- Github -->\n            <a class=\"tw-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/nosteiner\">\n                <mdb-icon icon=\"github\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\n            </a>\n            <!--Linkedin -->\n            <a class=\"li-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.linkedin.com/in/noamsteiner/\">\n                <mdb-icon icon=\"linkedin\" size=\"2x\" class=\"white-text\"></mdb-icon>\n            </a>\n            \n          </div>\n        </div>\n        <!-- Grid column -->\n\n    </div>\n    <!-- Grid row -->\n\n  </div>\n  <!-- Footer Links -->\n\n  <!-- Copyright -->\n  <div class=\"footer-copyright text-center py-3\">© 2018 Copyright: NoamSteiner</div>\n  <!-- Copyright -->\n\n</footer>\n<!-- Footer -->"
+module.exports = "<!-- technologies -->\n<!-- <div class=\"row  d-flex justify-content-center p-3\">\n  <div class=\"img-container mx-2\">\n    <img src=\"assets/icons/angular.png\">\n  </div>\n  <div class=\"img-container mx-2\"> <img src=\"assets/icons/html.png\">\n  </div>\n  <div class=\"img-container mx-2\"> <img src=\"assets/icons/css.png\">\n  </div>\n  <div class=\"img-container mx-2\">\n    <img src=\"assets/icons/es6.png\">\n  </div>\n  <div class=\"img-container mx-2\">\n    <img src=\"assets/icons/bootstrap.png\">\n  </div>\n  <div class=\"img-container p-1\">\n\n    <img src=\"assets/icons/nodejs.png\">\n  </div>\n\n\n  <div class=\"img-container\">\n    <img src=\"assets/icons/mongodb.png\">\n  </div>\n  <div class=\"img-container\">\n    <img src=\"assets/icons/mysql.png\">\n  </div>\n  <div class=\"img-container\">\n    <img src=\"assets/icons/heroku.png\">\n  </div>\n  <div class=\"img-container\">\n    <img src=\"assets/icons/jquery.png\">\n  </div>\n</div> -->\n\n<!-- Footer -->\n<footer class=\"page-footer font-small pink darken-4 pt-4\">\n\n  <!-- Footer Links -->\n  <div class=\"container text-center text-md-left\">\n\n    <!-- Grid row -->\n    <div class=\"row\">\n\n      <!-- Grid column -->\n      <div class=\"col-md-12 py-5\">\n        <div class=\"mb-5 flex-center\">\n\n          <a class=\"fb-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"mailto:no.steiner@gmail.com\">\n            <mdb-icon icon=\"envelope\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\n          </a>\n          <!-- Slack -->\n          <a class=\"fb-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://wa.me/9720525599200\">\n            <mdb-icon icon=\"whatsapp\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\n          </a>\n          <!-- Github -->\n          <a class=\"tw-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/nosteiner\">\n            <mdb-icon icon=\"github\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\n          </a>\n          <!--Linkedin -->\n          <a class=\"li-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.linkedin.com/in/noamsteiner/\">\n            <mdb-icon icon=\"linkedin\" size=\"2x\" class=\"white-text\"></mdb-icon>\n          </a>\n\n        </div>\n      </div>\n      <!-- Grid column -->\n\n    </div>\n    <!-- Grid row -->\n\n  </div>\n  <!-- Footer Links -->\n\n  <!-- Copyright -->\n  <div class=\"footer-copyright text-center py-3\">© 2018 Copyright: NoamSteiner</div>\n  <!-- Copyright -->\n\n</footer>\n<!-- Footer -->"
 
 /***/ }),
 
@@ -693,7 +697,7 @@ module.exports = "<!-- Footer -->\n<footer class=\"page-footer font-small pink d
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".img-container {\n  width: 70px; }\n  .img-container img {\n    width: 100%;\n    -webkit-filter: grayscale(100%);\n    /* Safari 6.0 - 9.0 */\n    filter: grayscale(100%); }\n"
 
 /***/ }),
 
@@ -808,7 +812,7 @@ var GalleryComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Main -->\n<header class=\"h-100\">\n    <div class=\"view jarallax\" data-jarallax='{\"speed\": 0.2}'>\n        <div class=\"full-bg-img\">\n            <div class=\"mask rgba-black-strong flex-center\">\n                <div class=\"container text-center white-text\">\n                    <div class=\"intro white-text text-center animated bounceInLeft\">\n                        <h1>AHOY!</h1>\n                        <h3>Welcome Abord</h3>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <!-- /.Main -->\n</header>\n\n<!--Main Layout-->\n\n<div class=\"container\">\n    <div class=\"pt-3\" id=\"aboutMe\">\n        <div class=\"row pt-5 \">\n                <div class=\"col-md-4 pb-5 col flex-last center\">\n                        <img src=\"assets/myself.jpg\">\n                    </div>\n            <div class=\"col-md-8 vertical-center\">\n                <p class=\"about\" align=\"justify\">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n                    commodo consequat. Duis\n                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                    Excepteur\n                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n                    laborum.\n                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore\n                    et\n                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n                    aliquip\n                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum\n                    dolore\n                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia\n                    deserunt\n                    mollit anim id est laborum.</p>\n            </div>\n            \n        </div>\n\n        <div class=\"row\" id=\"Technologies\">\n            <div class=\"col-md-12\">\n\n            </div>\n        </div>\n    </div>\n</div>\n<!-- <button mat-fab color=\"warn\" id=\"fixedbutton\"><a href=\"tel:+972525599200\"> <i class=\"fa fa-2x fa-phone white-text\" aria-hidden=\"true\"></i></a></button> -->\n\n<!--Main Layout-->"
+module.exports = "<!-- Main -->\n<header class=\"h-100\">\n    <div class=\"view jarallax\" data-jarallax='{\"speed\": 0.2}'>\n        <div class=\"full-bg-img\">\n            <div class=\"mask rgba-black-strong flex-center\">\n                <div class=\"container text-center white-text\">\n                    <div class=\"intro white-text text-center animated bounceInLeft\">\n                        <h1>AHOY!</h1>\n                        <h3>Welcome Abord</h3>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <!-- /.Main -->\n</header>\n\n<!--Main Layout-->\n\n<div class=\"container\">\n    <div class=\"pt-3\" id=\"aboutMe\">\n\n        <div class=\"row pt-5 \">\n            <div class=\"col-md-4 pb-5 col flex-last center\">\n                <img src=\"assets/myself.jpg\">\n            </div>\n            <div class=\"col-md-8 vertical-center\">\n                <div>\n                    <h3>I'm Noam Steiner, a full Stack web developer.</h3>\n\n                    <p class=\"about\" align=\"justify\">\n                        I am currently developing mainly in Angular 6 but at the same time invests in learning\n                        additional\n                        technologies and frameworks. I currently work on a number of projects independently, so you can\n                        see\n                        my portfolio enriched all the time.\n                        <br>\n                        I would love to hear from you!</p>\n                </div>\n            </div>\n\n        </div>\n\n        <div class=\"row\" id=\"Technologies\">\n            <div class=\"col-md-12\">\n\n            </div>\n        </div>\n    </div>\n</div>\n<!-- <button mat-fab color=\"warn\" id=\"fixedbutton\"><a href=\"tel:+972525599200\"> <i class=\"fa fa-2x fa-phone white-text\" aria-hidden=\"true\"></i></a></button> -->\n\n<!--Main Layout-->"
 
 /***/ }),
 

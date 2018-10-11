@@ -6,6 +6,7 @@ import {MatButtonModule} from '@angular/material';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -39,7 +40,8 @@ import { ContactCardComponent } from './components/contact-card/contact-card.com
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    NgxGalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
