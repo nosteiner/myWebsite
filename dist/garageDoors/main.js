@@ -734,7 +734,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n    <mdb-navbar SideClass=\"navbar z-depth-0 fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav\" [containerInside]=\"false\">\n           \n        <links>\n            <ul class=\"navbar-nav mr-auto\">\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#aboutMe'\">About</a>\n              \n                </li>\n                \n                <!-- <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#technologies'\">Technologies</a>\n                </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                        <a class=\"nav-link\" [ngx-scroll-to]=\"'#portfolio'\">Portfolio</a>\n                    </li> -->\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#contact'\" >Contact</a>\n                </li>\n\n            </ul>\n           \n            <div class=\"nav-item waves-light float-right\" mdbWavesEffect>\n                                    <a class=\"nav-link CV \" style=\"color:white\" (click)=\"download()\"><i class=\"fa fa-download\" aria-hidden=\"true\"></i> Download CV</a>\n                <!-- <a class=\"nav-link CV \" style=\"color:white\" href=\"assets/NoamSteinerCV.docx\" download><i class=\"fa fa-download\" aria-hidden=\"true\"></i> Download CV</a> -->\n            </div>\n            \n        </links>\n    </mdb-navbar>\n"
+module.exports = "\n    <mdb-navbar SideClass=\"navbar z-depth-0 fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav\" [containerInside]=\"false\">\n           \n        <links>\n            <ul class=\"navbar-nav mr-auto\">\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#aboutMe'\">About</a>\n              \n                </li>\n                \n                <!-- <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#technologies'\">Technologies</a>\n                </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                        <a class=\"nav-link\" [ngx-scroll-to]=\"'#portfolio'\">Portfolio</a>\n                    </li> -->\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#contact'\" >Contact</a>\n                </li>\n\n            </ul>\n           \n            <div class=\"nav-item waves-light float-right\" mdbWavesEffect>\n                                    <a class=\"nav-link CV \" style=\"color:white\" (click)=\"download()\" href=\"{{link}}\"><i class=\"fa fa-download\" aria-hidden=\"true\"></i> Download CV</a>\n                <!-- <a class=\"nav-link CV \" style=\"color:white\" href=\"assets/NoamSteinerCV.docx\" download><i class=\"fa fa-download\" aria-hidden=\"true\"></i> Download CV</a> -->\n            </div>\n            \n        </links>\n    </mdb-navbar>\n"
 
 /***/ }),
 
@@ -775,11 +775,9 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var NavbarComponent = /** @class */ (function () {
     function NavbarComponent(contactService) {
         this.contactService = contactService;
+        this.link = "https://www.dropbox.com/s/5umhd01argaamnb/Noam%20Steiner%20CV%20-%202018.docx?dl=1";
     }
     NavbarComponent.prototype.ngOnInit = function () {
-    };
-    NavbarComponent.prototype.download = function () {
-        this.contactService.download();
     };
     NavbarComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
