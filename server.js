@@ -58,8 +58,6 @@ app.post('/sendEmail', (req, res) => {
 });
 
 
-
-
 // Set our api routes
 // app.use('/', api);
 

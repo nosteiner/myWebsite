@@ -12,4 +12,5 @@ export class ContactService {
   sendEmail(message){
    return this.http.post<Message>('sendEmail',message)
   }
+
 }

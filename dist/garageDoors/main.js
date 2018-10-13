@@ -734,7 +734,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n    <mdb-navbar SideClass=\"navbar z-depth-0 fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav\" [containerInside]=\"false\">\n           \n        <links>\n            <ul class=\"navbar-nav mr-auto\">\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#aboutMe'\">About</a>\n              \n                </li>\n                \n                <!-- <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#technologies'\">Technologies</a>\n                </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                        <a class=\"nav-link\" [ngx-scroll-to]=\"'#portfolio'\">Portfolio</a>\n                    </li> -->\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#contact'\" >Contact</a>\n                </li>\n\n            </ul>\n           \n            <div class=\"nav-item waves-light float-right\" mdbWavesEffect>\n                    <a class=\"nav-link CV \" style=\"color:white\" href=\"assets/NoamSteinerCV.docx\" download><i class=\"fa fa-download\" aria-hidden=\"true\"></i> Download CV</a>\n            </div>\n            \n        </links>\n    </mdb-navbar>\n"
+module.exports = "\n    <mdb-navbar SideClass=\"navbar z-depth-0 fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav\" [containerInside]=\"false\">\n           \n        <links>\n            <ul class=\"navbar-nav mr-auto\">\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#aboutMe'\">About</a>\n              \n                </li>\n                \n                <!-- <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#technologies'\">Technologies</a>\n                </li>\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                        <a class=\"nav-link\" [ngx-scroll-to]=\"'#portfolio'\">Portfolio</a>\n                    </li> -->\n                <li class=\"nav-item waves-light\" mdbWavesEffect>\n                    <a class=\"nav-link\" [ngx-scroll-to]=\"'#contact'\" >Contact</a>\n                </li>\n\n            </ul>\n           \n            <div class=\"nav-item waves-light float-right\" mdbWavesEffect>\n                                    <a class=\"nav-link CV \" style=\"color:white\" (click)=\"download()\"><i class=\"fa fa-download\" aria-hidden=\"true\"></i> Download CV</a>\n                <!-- <a class=\"nav-link CV \" style=\"color:white\" href=\"assets/NoamSteinerCV.docx\" download><i class=\"fa fa-download\" aria-hidden=\"true\"></i> Download CV</a> -->\n            </div>\n            \n        </links>\n    </mdb-navbar>\n"
 
 /***/ }),
 
@@ -760,6 +760,7 @@ module.exports = ".navbar {\n  background-color: transparent; }\n\n.CV {\n  bord
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavbarComponent", function() { return NavbarComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _contact_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../contact.service */ "./src/app/contact.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -770,10 +771,15 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var NavbarComponent = /** @class */ (function () {
-    function NavbarComponent() {
+    function NavbarComponent(contactService) {
+        this.contactService = contactService;
     }
     NavbarComponent.prototype.ngOnInit = function () {
+    };
+    NavbarComponent.prototype.download = function () {
+        this.contactService.download();
     };
     NavbarComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -781,7 +787,7 @@ var NavbarComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./navbar.component.html */ "./src/app/components/navbar/navbar.component.html"),
             styles: [__webpack_require__(/*! ./navbar.component.scss */ "./src/app/components/navbar/navbar.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_contact_service__WEBPACK_IMPORTED_MODULE_1__["ContactService"]])
     ], NavbarComponent);
     return NavbarComponent;
 }());
