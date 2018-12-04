@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material';
-import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { NgxGalleryModule } from 'ngx-gallery';
@@ -15,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ContactCardComponent } from './components/contact-card/contact-card.com
     FooterComponent,
     NavbarComponent,
     HomeComponent,
-    ContactCardComponent
+    ContactCardComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
