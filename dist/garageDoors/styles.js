@@ -662,10 +662,10 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\steiner\code\projects\garageDoors\node_modules\font-awesome\scss\font-awesome.scss */"./node_modules/font-awesome/scss/font-awesome.scss");
-__webpack_require__(/*! C:\Users\steiner\code\projects\garageDoors\node_modules\angular-bootstrap-md\scss\bootstrap\bootstrap.scss */"./node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss");
-__webpack_require__(/*! C:\Users\steiner\code\projects\garageDoors\node_modules\angular-bootstrap-md\scss\mdb-free.scss */"./node_modules/angular-bootstrap-md/scss/mdb-free.scss");
-module.exports = __webpack_require__(/*! C:\Users\steiner\code\projects\garageDoors\src\styles.scss */"./src/styles.scss");
+__webpack_require__(/*! C:\Users\noste\Code\Angular\myWebsite\node_modules\font-awesome\scss\font-awesome.scss */"./node_modules/font-awesome/scss/font-awesome.scss");
+__webpack_require__(/*! C:\Users\noste\Code\Angular\myWebsite\node_modules\angular-bootstrap-md\scss\bootstrap\bootstrap.scss */"./node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss");
+__webpack_require__(/*! C:\Users\noste\Code\Angular\myWebsite\node_modules\angular-bootstrap-md\scss\mdb-free.scss */"./node_modules/angular-bootstrap-md/scss/mdb-free.scss");
+module.exports = __webpack_require__(/*! C:\Users\noste\Code\Angular\myWebsite\src\styles.scss */"./src/styles.scss");
 
 
 /***/ })
