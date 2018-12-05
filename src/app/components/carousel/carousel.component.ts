@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectsService } from 'src/app/Services/projects.service';
+import {Project} from './../../Project';
 
 @Component({
   selector: 'app-carousel',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
 
-  constructor() { }
+projects = Array<Project>();
+  constructor(private projectsService: ProjectsService) { }
 
   ngOnInit() {
+    this.projectsService.getProjects().subscribe((projects) => {
+      this.projects = projects;
+      console.log(projects);
+    });
   }
-
 }

@@ -1,9 +1,7 @@
-export class Message{
+export class Message {
     constructor() {}
     name: string;
-  
     email: string;
-   
     title: string;
     text: string;
 
@@ -12,6 +10,5 @@ export class Message{
         this.email = data.email;
         this.title = data.title;
         this.text = data.text;
-       
       }
 }

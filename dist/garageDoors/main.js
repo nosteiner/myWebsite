@@ -329,6 +329,50 @@ var Message = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/Services/projects.service.ts":
+/*!**********************************************!*\
+  !*** ./src/app/Services/projects.service.ts ***!
+  \**********************************************/
+/*! exports provided: ProjectsService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectsService", function() { return ProjectsService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ProjectsService = /** @class */ (function () {
+    function ProjectsService(http) {
+        this.http = http;
+        this.projects = new Array();
+    }
+    ProjectsService.prototype.getProjects = function () {
+        return this.http.get('/projects');
+    };
+    ProjectsService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], ProjectsService);
+    return ProjectsService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/app-routing.module.ts":
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
@@ -377,7 +421,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\r\n<router-outlet></router-outlet>\r\n<!-- <app-carousel></app-carousel> -->\r\n<app-contact-card></app-contact-card>\r\n<app-footer></app-footer>\r\n"
+module.exports = "<app-navbar></app-navbar>\r\n<router-outlet></router-outlet>\r\n<app-carousel></app-carousel>\r\n<app-contact-card></app-contact-card>\r\n<app-footer></app-footer>\r\n"
 
 /***/ }),
 
@@ -455,12 +499,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
 /* harmony import */ var _components_contact_card_contact_card_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/contact-card/contact-card.component */ "./src/app/components/contact-card/contact-card.component.ts");
 /* harmony import */ var _components_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/carousel/carousel.component */ "./src/app/components/carousel/carousel.component.ts");
+/* harmony import */ var _components_project_card_project_card_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/project-card/project-card.component */ "./src/app/components/project-card/project-card.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -488,7 +534,8 @@ var AppModule = /** @class */ (function () {
                 _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_12__["NavbarComponent"],
                 _components_home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"],
                 _components_contact_card_contact_card_component__WEBPACK_IMPORTED_MODULE_14__["ContactCardComponent"],
-                _components_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_15__["CarouselComponent"]
+                _components_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_15__["CarouselComponent"],
+                _components_project_card_project_card_component__WEBPACK_IMPORTED_MODULE_16__["ProjectCardComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -520,7 +567,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--Carousel Wrapper-->\n<mdb-carousel [isControls]=\"true\" [animation]=\"'slide'\">\n  <!--First slide-->\n  <mdb-carousel-item>\n      <img class=\"d-block w-100\" src=\"../../../assets/ez.png\" alt=\"First slide\">\n  </mdb-carousel-item>\n  <!--/First slide-->\n  <!--Second slide-->\n  <mdb-carousel-item>\n      <img class=\"d-block w-100\" src=\"https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg\" alt=\"Second slide\">\n  </mdb-carousel-item>\n  <!--/Second slide-->\n  <!--Third slide-->\n  <mdb-carousel-item>\n      <img class=\"d-block w-100\" src=\"https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg\" alt=\"Third slide\">\n  </mdb-carousel-item>\n  <!--/Third slide-->\n</mdb-carousel>\n<!--/.Carousel Wrapper-->"
+module.exports = "<!--Carousel Wrapper-->\n<mdb-carousel  [isControls]=\"true\" [animation]=\"'slide'\">\n  <mdb-carousel-item *ngFor=\"let project of projects\">\n      <div class=\"view w-100\">\n      <img class=\"d-block w-100\" src=\"../../../assets/ez.png\" alt=\"First slide\">\n      </div>\n      <div class=\"carousel-caption\">\n     <h1>{{project.name}}</h1>\n     </div>\n  </mdb-carousel-item>\n</mdb-carousel>\n<!--/.Carousel Wrapper-->"
 
 /***/ }),
 
@@ -546,6 +593,7 @@ module.exports = ""
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CarouselComponent", function() { return CarouselComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_Services_projects_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/Services/projects.service */ "./src/app/Services/projects.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -556,10 +604,18 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var CarouselComponent = /** @class */ (function () {
-    function CarouselComponent() {
+    function CarouselComponent(projectsService) {
+        this.projectsService = projectsService;
+        this.projects = Array();
     }
     CarouselComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.projectsService.getProjects().subscribe(function (projects) {
+            _this.projects = projects;
+            console.log(projects);
+        });
     };
     CarouselComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -567,7 +623,7 @@ var CarouselComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./carousel.component.html */ "./src/app/components/carousel/carousel.component.html"),
             styles: [__webpack_require__(/*! ./carousel.component.scss */ "./src/app/components/carousel/carousel.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [src_app_Services_projects_service__WEBPACK_IMPORTED_MODULE_1__["ProjectsService"]])
     ], CarouselComponent);
     return CarouselComponent;
 }());
@@ -854,6 +910,69 @@ var NavbarComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_contact_service__WEBPACK_IMPORTED_MODULE_1__["ContactService"]])
     ], NavbarComponent);
     return NavbarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/project-card/project-card.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/project-card/project-card.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/project-card/project-card.component.scss":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/project-card/project-card.component.scss ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/project-card/project-card.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/project-card/project-card.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: ProjectCardComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectCardComponent", function() { return ProjectCardComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ProjectCardComponent = /** @class */ (function () {
+    function ProjectCardComponent() {
+    }
+    ProjectCardComponent.prototype.ngOnInit = function () {
+    };
+    ProjectCardComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-project-card',
+            template: __webpack_require__(/*! ./project-card.component.html */ "./src/app/components/project-card/project-card.component.html"),
+            styles: [__webpack_require__(/*! ./project-card.component.scss */ "./src/app/components/project-card/project-card.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ProjectCardComponent);
+    return ProjectCardComponent;
 }());
 
 

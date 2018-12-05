@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
@@ -16,6 +16,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     NavbarComponent,
     HomeComponent,
     ContactCardComponent,
-    CarouselComponent
+    CarouselComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,

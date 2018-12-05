@@ -5,7 +5,7 @@ const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-
+const projects = require('../server/Projects');
 
 // Get our API routes
 // const api = require('./server/routes/api');
@@ -17,12 +17,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Point static path to dist
-app.use(express.static(path.join(__dirname, 'dist/garageDoors')));
+app.use(express.static(path.join(__dirname, '../dist/garageDoors')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
+
+app.get('/projects', function (req, res) {
+ 
+  res.send(projects);
+})
 
 // Nodemailer
 app.post('/sendEmail', (req, res) => {
- 
+
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -35,14 +40,14 @@ app.post('/sendEmail', (req, res) => {
     from: req.body.name,
     to: 'no.steiner@gmail.com',
     subject: req.body.title,
-    html: '<h2>'+ req.body.title +'</h2>'+
-      '<p>'+  req.body.text +'</p>'+
-      '<p><b>Name: </b>'+ req.body.name+'<p>'+
-      '<p><b>Email: </b>'+ req.body.email+'<p>'
-     
-    };
-  
-  transporter.sendMail(mailOptions, function(error, info){
+    html: '<h2>' + req.body.title + '</h2>' +
+      '<p>' + req.body.text + '</p>' +
+      '<p><b>Name: </b>' + req.body.name + '<p>' +
+      '<p><b>Email: </b>' + req.body.email + '<p>'
+
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
       console.log(error);
     } else {
@@ -63,9 +68,9 @@ app.post('/sendEmail', (req, res) => {
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
-    console.log('yooooo')
+  console.log('yooooo')
   res.sendFile(path.join(__dirname, 'dist/garageDoors/index.html'));
-//   res.sendFile('index.html', { root: path.join(__dirname, './dist/garageDoors') });
+  //   res.sendFile('index.html', { root: path.join(__dirname, './dist/garageDoors') });
 });
 // app.get('*', function (req, res) {
 //   const index = path.join(__dirname, 'dist', 'index.html');

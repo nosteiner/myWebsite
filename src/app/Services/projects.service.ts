@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
+import { Project } from './../Project';
 import { HttpClient } from '@angular/common/http';
-import { Message } from './Message';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ContactService {
+export class ProjectsService {
 
+  projects = new Array<Project>();
   constructor(private http: HttpClient) { }
 
-  sendEmail(message){
-   return this.http.post<Message>('sendEmail', message);
+  getProjects() {
+  return this.http.get<Project[]>('/projects')
   }
-
 }
