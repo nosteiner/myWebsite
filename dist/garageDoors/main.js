@@ -567,7 +567,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--Carousel Wrapper-->\n<mdb-carousel  [isControls]=\"true\" [animation]=\"'slide'\">\n  <mdb-carousel-item *ngFor=\"let project of projects\">\n      <div class=\"view w-100\">\n      <img class=\"d-block w-100\" src=\"../../../assets/ez.png\" alt=\"First slide\">\n      </div>\n      <div class=\"carousel-caption\">\n     <h1>{{project.name}}</h1>\n     </div>\n  </mdb-carousel-item>\n</mdb-carousel>\n<!--/.Carousel Wrapper-->"
+module.exports = "<!--Carousel Wrapper-->\n<mdb-carousel [interval]=\"0\" [isControls]=\"true\" [animation]=\"'slide'\">\n  <mdb-carousel-item *ngFor=\"let project of projects\">\n      <div class=\"view w-100\">\n      <img class=\"d-block w-100\" src=\"../../../assets/ez.png\" alt=\"First slide\">\n      </div>\n      <div class=\"carousel-caption\">\n     <h1>{{project.name}}</h1>\n     </div>\n  </mdb-carousel-item>\n</mdb-carousel>\n<!--/.Carousel Wrapper-->"
 
 /***/ }),
 
