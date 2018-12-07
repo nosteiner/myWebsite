@@ -8,13 +8,13 @@
     color: rgb(0, 0, 0);
     text-align: center;
 }
-.project{
-    background-image: url("./../../../assets/back.jpg");
+.projects{
+    background-image: url("./../../../assets/585804546-color-gradient-wallpaper-hd.jpg");
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
-.img-wrap{
-    margin: 10%;
-}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 100px;
@@ -41,10 +41,11 @@
 
 *{
     font-family: 'Open Sans', sans-serif;
-color: beige;
+color: rgb(255, 255, 255);
 }
 
 .vertical-center{
     display: flex;
     align-items: center;
 }
+

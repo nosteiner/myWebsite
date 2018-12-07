@@ -567,7 +567,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--Carousel Wrapper-->\n<div  class=\"row project\" id=\"portfolio\">\n<mdb-carousel [interval]=\"0\" [isControls]=\"true\" [animation]=\"'slide'\">\n  <mdb-carousel-item *ngFor=\"let project of projects\">\n    <div class=\"view w-100\">\n      <div class=\"row p-5 m-5\">\n        <div class=\"col-md-5 vertical-center carousel-title\">\n            <div>\n          <h1>{{project.name}}</h1>\n          <p>{{project.description}}</p>\n        </div>\n      </div>\n        <div class=\"col-md-7\">\n          <div class=\"img-wrap\">\n            <a href={{project.url}}> <img class=\"w-100 z-depth-2\" src={{project.img}} alt=\"First slide\"> </a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </mdb-carousel-item>\n</mdb-carousel>\n<!--/.Carousel Wrapper-->\n</div>"
+module.exports = "<!--Carousel Wrapper-->\n<div  class=\"projects\" id=\"portfolio\">\n\n<mdb-carousel [interval]=\"0\" [isControls]=\"true\" [animation]=\"'slide'\">\n  <mdb-carousel-item *ngFor=\"let project of projects\">\n    <div class=\"view w-100\">\n      <div class=\"row m-5\">\n        <div class=\"col-md-5 vertical-center carousel-title\">\n            <div>\n          <h1>{{project.name}}</h1>\n          <p>{{project.description}}</p>\n        </div>\n      </div>\n        <div class=\"col-md-7\">\n          <div class=\"img-wrap\">\n            <a href={{project.url}}> <img class=\"w-100 z-depth-2\" src={{project.img}} alt=\"First slide\"> </a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </mdb-carousel-item>\n</mdb-carousel>\n<!--/.Carousel Wrapper-->\n</div>"
 
 /***/ }),
 
@@ -578,7 +578,7 @@ module.exports = "<!--Carousel Wrapper-->\n<div  class=\"row project\" id=\"port
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".carousel-card {\n  right: 15%;\n  bottom: 20px;\n  left: 15%;\n  z-index: 10;\n  padding-top: 20px;\n  padding-bottom: 20px;\n  color: black;\n  text-align: center; }\n\n.project {\n  background-image: url('back.jpg');\n  position: relative; }\n\n.img-wrap {\n  margin: 10%; }\n\n.carousel-control-prev-icon,\n.carousel-control-next-icon {\n  height: 100px;\n  width: 100px;\n  outline: black;\n  background-size: 100%, 100%;\n  border-radius: 50%;\n  border: 1px solid black;\n  background-image: none; }\n\n.carousel-control-next-icon:after {\n  content: '>';\n  font-size: 55px;\n  color: red; }\n\n.carousel-control-prev-icon:after {\n  content: '<';\n  font-size: 55px;\n  color: red; }\n\n* {\n  font-family: 'Open Sans', sans-serif;\n  color: beige; }\n\n.vertical-center {\n  display: flex;\n  align-items: center; }\n"
+module.exports = ".carousel-card {\n  right: 15%;\n  bottom: 20px;\n  left: 15%;\n  z-index: 10;\n  padding-top: 20px;\n  padding-bottom: 20px;\n  color: black;\n  text-align: center; }\n\n.projects {\n  background-image: url('585804546-color-gradient-wallpaper-hd.jpg');\n  position: relative;\n  display: flex;\n  flex-wrap: wrap; }\n\n.carousel-control-prev-icon,\n.carousel-control-next-icon {\n  height: 100px;\n  width: 100px;\n  outline: black;\n  background-size: 100%, 100%;\n  border-radius: 50%;\n  border: 1px solid black;\n  background-image: none; }\n\n.carousel-control-next-icon:after {\n  content: '>';\n  font-size: 55px;\n  color: red; }\n\n.carousel-control-prev-icon:after {\n  content: '<';\n  font-size: 55px;\n  color: red; }\n\n* {\n  font-family: 'Open Sans', sans-serif;\n  color: white; }\n\n.vertical-center {\n  display: flex;\n  align-items: center; }\n"
 
 /***/ }),
 
@@ -650,7 +650,7 @@ module.exports = "<div class=\"container\" id=\"contact\">\r\n  <div class=\"row
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".emailSent {\n  text-align: center;\n  padding: 70px 0; }\n\np {\n  font-family: 'Caveat', cursive; }\n\ninput {\n  font-family: 'Open Sans', sans-serif; }\n\ninput.ng-invalid.ng-touched {\n  border: 2px solid #d89db7; }\n\ninput.ng-valid {\n  border: 2px solid #dfdcac; }\n\n.sendAnotherOne:hover {\n  text-shadow: 1px 1px black; }\n\n.container {\n  position: relative; }\n"
+module.exports = ".emailSent {\n  text-align: center;\n  padding: 70px 0; }\n\np {\n  font-family: 'Caveat', cursive; }\n\ninput {\n  font-family: 'Open Sans', sans-serif; }\n\ninput.ng-invalid.ng-touched {\n  border: 2px solid #d89db7; }\n\ninput.ng-valid {\n  border: 2px solid #dfdcac; }\n\n.sendAnotherOne:hover {\n  text-shadow: 1px 1px black; }\n\n.container {\n  position: relative; }\n\n.contact {\n  margin: 3rem; }\n"
 
 /***/ }),
 

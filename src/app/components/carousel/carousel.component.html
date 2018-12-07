@@ -1,9 +1,10 @@
 <!--Carousel Wrapper-->
-<div  class="row project" id="portfolio">
+<div  class="projects" id="portfolio">
+
 <mdb-carousel [interval]="0" [isControls]="true" [animation]="'slide'">
   <mdb-carousel-item *ngFor="let project of projects">
     <div class="view w-100">
-      <div class="row p-5 m-5">
+      <div class="row m-5">
         <div class="col-md-5 vertical-center carousel-title">
             <div>
           <h1>{{project.name}}</h1>
