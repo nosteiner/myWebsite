@@ -1,0 +1,50 @@
+.carousel-card {
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.project{
+    background-image: url("./../../../assets/back.jpg");
+    position: absolute;
+}
+.img-wrap{
+    margin: 10%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: red;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: red;
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+color: beige;
+}
+
+.vertical-center{
+    display: flex;
+    align-items: center;
+}

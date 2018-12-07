@@ -4,7 +4,7 @@
       "type": "Web Application\n",
       "description": "A platform for package deliveries, that allow people who need a delivery person to easily find that person, and vice versa. Anyone can sign up for either giving or receiving service quickly and simply.",
       "technoligies": "Angular 6, Node.js, MySql.",
-      "img": "",
+      "img": "../../../assets/ez.png",
       "url": "https://ezxpress-app.herokuapp.com/"
     },
     {
@@ -12,7 +12,7 @@
       "type": "CRUD functions front end web page.",
       "description": "Create, read, update and remove books from my collection, based on Google Books API.",
       "technoligies": "Angular 6, Google books Api.",
-      "img": "",
+      "img": "../../../assets/books.png",
       "url": "https://get-the-job.firebaseapp.com/"
     }
   ]

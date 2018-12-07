@@ -11,6 +11,6 @@ export class ProjectsService {
   constructor(private http: HttpClient) { }
 
   getProjects() {
-  return this.http.get<Project[]>('/projects')
+  return this.http.get<Project[]>('/projects');
   }
 }

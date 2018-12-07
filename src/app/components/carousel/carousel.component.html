@@ -1,12 +1,23 @@
 <!--Carousel Wrapper-->
+<div  class="row project">
 <mdb-carousel [interval]="0" [isControls]="true" [animation]="'slide'">
   <mdb-carousel-item *ngFor="let project of projects">
-      <div class="view w-100">
-      <img class="d-block w-100" src="../../../assets/ez.png" alt="First slide">
+    <div class="view w-100">
+      <div class="row p-5 m-5">
+        <div class="col-md-5 vertical-center carousel-title">
+            <div>
+          <h1>{{project.name}}</h1>
+          <p>{{project.description}}</p>
+        </div>
       </div>
-      <div class="carousel-caption">
-     <h1>{{project.name}}</h1>
-     </div>
+        <div class="col-md-7">
+          <div class="img-wrap">
+            <a href={{project.url}}> <img class="w-100 z-depth-2" src={{project.img}} alt="First slide"> </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </mdb-carousel-item>
 </mdb-carousel>
 <!--/.Carousel Wrapper-->
+</div>
