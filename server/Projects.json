@@ -20,7 +20,7 @@
       "type": "Game",
       "description": "Adaptation to Pokemon game from the old Blocks Breaker",
       "technoligies": "Unity3D",
-      "img": "../../../assets/catch.png",
+      "img": "../../../assets/catchemall.png",
       "url": "https://nosteiner.github.io/Catch-Em-All/"
     }
   ]
