@@ -18,7 +18,7 @@
     {
       "name": "Gotta Catch 'Em All",
       "type": "Game",
-      "description": "Adaptation to Pokemon game from the old Blocks Breaker",
+      "description": "Adjustments to Pokemon catch 'em all game from the old Blocks Breaker",
       "technoligies": "Unity3D",
       "img": "../../../assets/catchemall.png",
       "url": "https://nosteiner.github.io/Catch-Em-All/"
