@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Point static path to dist
-app.use(express.static(path.join(__dirname, '../dist/garageDoors')));
+app.use(express.static(path.join(__dirname, '../dist/myWebsite')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.get('/projects', function (req, res) {
@@ -57,7 +57,7 @@ app.post('/sendEmail', (req, res) => {
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
   console.log('yooooo')
-  res.sendFile(path.join(__dirname, 'dist/garageDoors/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/myWebsite/index.html'));
 });
 
 app.use(function (err, req, res, next) {
