@@ -1,15 +1,9 @@
-
-// Get dependencies
 const express = require('express');
 const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const projects = require('../server/Projects');
-
-// Get our API routes
-// const api = require('./server/routes/api');
-
 const app = express();
 
 // Parsers for POST data
@@ -44,7 +38,6 @@ app.post('/sendEmail', (req, res) => {
       '<p>' + req.body.text + '</p>' +
       '<p><b>Name: </b>' + req.body.name + '<p>' +
       '<p><b>Email: </b>' + req.body.email + '<p>'
-
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
@@ -59,27 +52,14 @@ app.post('/sendEmail', (req, res) => {
     success: true,
     message: 'Emails sent',
   });
-
 });
-
-
-// Set our api routes
-// app.use('/', api);
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
   console.log('yooooo')
   res.sendFile(path.join(__dirname, 'dist/garageDoors/index.html'));
-  //   res.sendFile('index.html', { root: path.join(__dirname, './dist/garageDoors') });
 });
-// app.get('*', function (req, res) {
-//   const index = path.join(__dirname, 'dist', 'index.html');
-//   res.sendFile(index);
-// });
 
-/**
- * Get port from environment and store in Express.
- */
 app.use(function (err, req, res, next) {
   console.error(err.stack)
   res.status(500).send('Something broke!')

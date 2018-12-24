@@ -421,7 +421,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\r\n<router-outlet></router-outlet>\r\n<app-carousel></app-carousel>\r\n<app-contact-card></app-contact-card>\r\n<app-footer></app-footer>\r\n"
+module.exports = "<app-navbar></app-navbar>\r\n<router-outlet></router-outlet>\r\n<app-carousel></app-carousel>\r\n<!-- <iframe src=\"../../s\" style=\"border:0px #000000 none;\" name=\"Game name\" scrolling=\"no\" frameborder=\"1\" marginheight=\"px\" marginwidth=\"320px\" height=\"320px\" width=\"480px\"></iframe> -->\r\n<app-contact-card></app-contact-card>\r\n<app-footer></app-footer>\r\n"
 
 /***/ }),
 
@@ -614,7 +614,6 @@ var CarouselComponent = /** @class */ (function () {
         var _this = this;
         this.projectsService.getProjects().subscribe(function (projects) {
             _this.projects = projects;
-            console.log(projects);
         });
     };
     CarouselComponent = __decorate([
@@ -639,7 +638,7 @@ var CarouselComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" id=\"contact\">\r\n  <div class=\"row justify-content-md-center\" *ngIf=\"emailSent == false\">\r\n\r\n    <div class=\"col-md-6\">\r\n      <!-- Default form contact -->\r\n      <form [formGroup]=\"messageEdit\" class=\"text-center p-5\">\r\n\r\n        <p class=\"h1 mb-4\">Talk to me</p>\r\n\r\n        <!-- Name -->\r\n        <input formControlName=\"name\" type=\"text\" id=\"formControl\" class=\"form-control mb-4\" placeholder=\"Name\" required>\r\n\r\n        <!-- Email -->\r\n        <input formControlName=\"email\" type=\"email\" id=\"formControl\" class=\"form-control mb-4\" placeholder=\"E-mail\"  required>\r\n\r\n        <!-- Name -->\r\n        <input formControlName=\"title\" type=\"text\" id=\"formControl\" class=\"form-control mb-4\" placeholder=\"Title\" required>\r\n        <!-- Message -->\r\n        <div class=\"form-group\">\r\n          <textarea formControlName=\"text\" class=\"form-control rounded-1\" id=\"formControl\" rows=\"6\" placeholder=\"Message\" required></textarea>\r\n        </div>\r\n\r\n        <!-- Send button -->\r\n        <button mdbBtn color=\"unique\" (click)=\"sendMailHandler()\" class=\"btn btn-info btn-block\" type=\"button\"\r\n          [disabled]=\"!messageEdit.valid\">Send</button>\r\n\r\n      </form>\r\n      <!-- Default form contact -->\r\n      <!-- </div> -->\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <div class=\"emailSent\" *ngIf=\"emailSent == true\">\r\n      <h4>Your message was sent successfully </h4>\r\n      <a class=\"sendAnotherOne green-text\" (click)=\"changeStatus(false)\">Send another one!</a>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"container\" id=\"contact\">\r\n  <div class=\"contact row justify-content-md-center\" *ngIf=\"emailSent == false\">\r\n\r\n    <div class=\"col-md-6\">\r\n      <!-- Default form contact -->\r\n      <form [formGroup]=\"messageEdit\" class=\"text-center p-5\">\r\n\r\n        <p class=\"h1 mb-4\">Talk to me</p>\r\n\r\n        <!-- Name -->\r\n        <input formControlName=\"name\" type=\"text\" id=\"formControl\" class=\"form-control mb-4\" placeholder=\"Name\" required>\r\n\r\n        <!-- Email -->\r\n        <input formControlName=\"email\" type=\"email\" id=\"formControl\" class=\"form-control mb-4\" placeholder=\"E-mail\"  required>\r\n\r\n        <!-- Name -->\r\n        <input formControlName=\"title\" type=\"text\" id=\"formControl\" class=\"form-control mb-4\" placeholder=\"Title\" required>\r\n        <!-- Message -->\r\n        <div class=\"form-group\">\r\n          <textarea formControlName=\"text\" class=\"form-control rounded-1\" id=\"formControl\" rows=\"6\" placeholder=\"Message\" required></textarea>\r\n        </div>\r\n\r\n        <!-- Send button -->\r\n        <button mdbBtn color=\"unique\" (click)=\"sendMailHandler()\" class=\"btn btn-info btn-block\" type=\"button\"\r\n          [disabled]=\"!messageEdit.valid\">Send</button>\r\n\r\n      </form>\r\n      <!-- Default form contact -->\r\n      <!-- </div> -->\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <div class=\"emailSent\" *ngIf=\"emailSent == true\">\r\n      <h4>Your message was sent successfully </h4>\r\n      <a class=\"sendAnotherOne green-text\" (click)=\"changeStatus(false)\">Send another one!</a>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -730,7 +729,7 @@ var ContactCardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<!-- Footer -->\r\n<footer class=\"page-footer font-small pt-4\">\r\n\r\n  <!-- Footer Links -->\r\n  <div class=\"container text-center text-md-left\">\r\n\r\n    <!-- Grid row -->\r\n    <div class=\"row\">\r\n\r\n      <!-- Grid column -->\r\n      <div class=\"col-md-12 py-5\">\r\n        <div class=\"mb-5 flex-center\">\r\n\r\n          <a class=\"fb-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"mailto:no.steiner@gmail.com\">\r\n            <mdb-icon icon=\"envelope\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\r\n          </a>\r\n          <!-- Slack -->\r\n          <a class=\"fb-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://wa.me/9720525599200\">\r\n            <mdb-icon icon=\"whatsapp\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\r\n          </a>\r\n          <!-- Github -->\r\n          <a class=\"tw-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/nosteiner\">\r\n            <mdb-icon icon=\"github\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\r\n          </a>\r\n          <!--Linkedin -->\r\n          <a class=\"li-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.linkedin.com/in/noamsteiner/\">\r\n            <mdb-icon icon=\"linkedin\" size=\"2x\" class=\"white-text\"></mdb-icon>\r\n          </a>\r\n\r\n        </div>\r\n      </div>\r\n      <!-- Grid column -->\r\n\r\n    </div>\r\n    <!-- Grid row -->\r\n\r\n  </div>\r\n  <!-- Footer Links -->\r\n\r\n  <!-- Copyright -->\r\n  <div class=\"footer-copyright text-center py-3\">© 2018 Copyright: NoamSteiner</div>\r\n  <!-- Copyright -->\r\n\r\n</footer>\r\n<!-- Footer -->"
+module.exports = "\r\n<!-- Footer -->\r\n<footer class=\"page-footer font-small pt-4\">\r\n\r\n  <!-- Footer Links -->\r\n  <div class=\"container text-center text-md-left\">\r\n\r\n    <!-- Grid row -->\r\n    <div class=\"row\">\r\n\r\n      <!-- Grid column -->\r\n      <div class=\"col-md-12 py-5\">\r\n        <div class=\"mb-5 flex-center\">\r\n\r\n          <a class=\"fb-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"mailto:no.steiner@gmail.com\">\r\n            <mdb-icon icon=\"envelope\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\r\n          </a>\r\n          <!-- Slack -->\r\n          <a class=\"fb-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://wa.me/9720525599200\">\r\n            <mdb-icon icon=\"whatsapp\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\r\n          </a>\r\n          <!-- Github -->\r\n          <a class=\"tw-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/nosteiner\">\r\n            <mdb-icon icon=\"github\" size=\"2x\" class=\"white-text mr-md-3 mr-3\"></mdb-icon>\r\n          </a>\r\n          <!--Linkedin -->\r\n          <a class=\"li-ic\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.linkedin.com/in/noamsteiner/\">\r\n            <mdb-icon icon=\"linkedin\" size=\"2x\" class=\"white-text\"></mdb-icon>\r\n          </a>\r\n\r\n        </div>\r\n      </div>\r\n      <!-- Grid column -->\r\n\r\n    </div>\r\n    <!-- Grid row -->\r\n\r\n  </div>\r\n  <!-- Footer Links -->\r\n  \r\n  <!-- Copyright -->\r\n  <div class=\"footer-copyright text-center py-3\">© 2018 Copyright: NoamSteiner</div>\r\n  <!-- Copyright -->\r\n</footer>\r\n<!-- Footer -->"
 
 /***/ }),
 
@@ -833,6 +832,8 @@ var HomeComponent = /** @class */ (function () {
     function HomeComponent() {
     }
     HomeComponent.prototype.ngOnInit = function () {
+        console.log('Hi! I am Looking for a full time position, feel free to contact me on no.steiner@gmail.com');
+        console.log('Check out the source code: https://github.com/nosteiner/myWebsite');
     };
     HomeComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

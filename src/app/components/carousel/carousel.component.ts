@@ -15,7 +15,6 @@ projects = Array<Project>();
   ngOnInit() {
     this.projectsService.getProjects().subscribe((projects) => {
       this.projects = projects;
-      console.log(projects);
     });
   }
 }
