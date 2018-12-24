@@ -3,7 +3,7 @@
       "name": "ezXpress",
       "type": "Web Application\n",
       "description": "A platform for package deliveries, that allow people who need a delivery person to easily find that person, and vice versa. Anyone can sign up for either giving or receiving service quickly and simply.",
-      "technoligies": "Angular 6, Node.js, MySql.",
+      "technologies": "Angular 6, Node.js, MySql.",
       "img": "../../../assets/ez.png",
       "url": "https://ezxpress-app.herokuapp.com/"
     },
@@ -11,15 +11,15 @@
       "name": "Book Shelf",
       "type": "CRUD functions front end web page.",
       "description": "Create, read, update and remove books from my collection, based on Google Books API.",
-      "technoligies": "Angular 6, Google books Api.",
+      "technologies": "Angular 6, Google books Api.",
       "img": "../../../assets/books.png",
       "url": "https://get-the-job.firebaseapp.com/"
     },
     {
       "name": "Gotta Catch 'Em All",
       "type": "Game",
-      "description": "Adjustments to Pokemon catch 'em all game from the old Blocks Breaker",
-      "technoligies": "Unity3D",
+      "description": "Adjustments to Pokemon catch 'em all game from the old Blocks Breaker.",
+      "technologies": "Unity3D.",
       "img": "../../../assets/catchemall.png",
       "url": "https://nosteiner.github.io/Catch-Em-All/"
     }
