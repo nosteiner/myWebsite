@@ -1,19 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-@import url('https://fonts.googleapis.com/css?family=Caveat|Megrim|Open+Sans');
 
-.top-nav-collapse a {color: black !important;
- 
+.top-nav-collapse a {
+    color: black !important;
  }
-
-
 
 .top-nav-collapse{
     background-color: white;
 }
-// @media (min-width: 768px) and (max-width: 1000px) {
-//     .top-nav-collapse {
-//         display: none !important;
-//     }
-//  }
-.top-nav-collapse button .navbar-toggler-icon {background-image: url('https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png') !important;}
+
+.top-nav-collapse button .navbar-toggler-icon {
+    background-image: url('https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png') !important;
+}
