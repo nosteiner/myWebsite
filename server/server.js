@@ -32,7 +32,7 @@ app.post('/sendEmail', (req, res) => {
     },
     tls: {
       rejectUnauthorized: false
-  }
+    }
   });
   var mailOptions = {
     from: req.body.name,
@@ -46,15 +46,10 @@ app.post('/sendEmail', (req, res) => {
 
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
-      console.log(error);
+      res.send(error);
     } else {
-      console.log('Email sent: ' + info.response);
+      res.send('success');
     }
-  });
-
-  res.send({
-    success: true,
-    message: 'Emails sent',
   });
 });
 

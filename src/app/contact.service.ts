@@ -9,8 +9,8 @@ export class ContactService {
 
   constructor(private http: HttpClient) { }
 
-  sendEmail(message){
-   return this.http.post<Message>('sendEmail', message);
+  sendEmail(message) {
+    return this.http.post('sendEmail', message);
   }
 
 }
