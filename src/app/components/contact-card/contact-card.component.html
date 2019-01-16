@@ -32,7 +32,14 @@
 
 
   <div class="emailSent" *ngIf="emailSent == true">
-      <h4>Your message was sent successfully </h4>
-      <a class="sendAnotherOne green-text" (click)="changeStatus(false)">Send another one!</a>
+    <span *ngIf="success == true">
+      <h3>Your message was sent successfully </h3>
+      <a class="sendAnotherOne pink-text h4" (click)="changeStatus(false)">Send another one!</a>
+    </span>
+    <span *ngIf="success == false">
+      <h3>An error has occurred </h3>
+      <a class="sendAnotherOne pink-text h4" (click)="changeStatus(false)">Try send another one</a>
+      <p class="h4">Or, send an email to: <a href="mailto:no.steiner@gmail.com">no.steiner@gmail.com</a></p>
+    </span>
   </div>
 </div>
