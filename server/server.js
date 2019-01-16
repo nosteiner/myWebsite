@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const projects = require('../server/Projects');
 const app = express();
+const dotenv = require('dotenv').config();
+
 
 // Parsers for POST data
 app.use(bodyParser.json());
@@ -15,7 +17,7 @@ app.use(express.static(path.join(__dirname, '../dist/myWebsite')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.get('/projects', function (req, res) {
- 
+
   res.send(projects);
 })
 
@@ -25,11 +27,13 @@ app.post('/sendEmail', (req, res) => {
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'no.steiner.dev@gmail.com',
-      pass: 'noam1234'
-    }
+      user: process.env.EMAIL_ADDRESS,
+      pass: process.env.EMAIL_PASS,
+    },
+    tls: {
+      rejectUnauthorized: false
+  }
   });
-
   var mailOptions = {
     from: req.body.name,
     to: 'no.steiner@gmail.com',
@@ -56,7 +60,6 @@ app.post('/sendEmail', (req, res) => {
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
-  console.log('yooooo')
   res.sendFile(path.join(__dirname, 'dist/myWebsite/index.html'));
 });
 
