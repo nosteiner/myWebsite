@@ -16,7 +16,6 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { HomeComponent } from './Components/home/home.component';
 import { ContactCardComponent } from './Components/contact-card/contact-card.component';
 import { CarouselComponent } from './Components/carousel/carousel.component';
-import { ProjectCardComponent } from './Components/project-card/project-card.component';
 
 
 @NgModule({
@@ -26,8 +25,7 @@ import { ProjectCardComponent } from './Components/project-card/project-card.com
     NavbarComponent,
     HomeComponent,
     ContactCardComponent,
-    CarouselComponent,
-    ProjectCardComponent
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
