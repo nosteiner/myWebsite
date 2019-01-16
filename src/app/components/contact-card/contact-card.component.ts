@@ -34,13 +34,14 @@ export class ContactCardComponent implements OnInit {
   sendMailHandler() {
     this.message.edit(this.messageEdit.value);
     this.contactService.sendEmail(this.message).subscribe((status) => {
+      console.log(status);
       this.messageEdit.reset();
       this.changeStatus(true);
 
-      if (status === 'success') {
-        this.success = true;
-      } else {
+      if ( status === Error) {
         this.success = false;
+      } else {
+        this.success = true;
       }
     });
   }

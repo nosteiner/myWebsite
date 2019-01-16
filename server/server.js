@@ -48,7 +48,7 @@ app.post('/sendEmail', (req, res) => {
     if (error) {
       res.send(error);
     } else {
-      res.send('success');
+      res.send(info);
     }
   });
 });
