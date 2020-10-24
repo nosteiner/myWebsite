@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from 'src/app/Services/projects.service';
-import {Project} from './../../Project';
+
+import { Project } from '../../Project';
 
 @Component({
   selector: 'app-carousel',
@@ -9,7 +10,7 @@ import {Project} from './../../Project';
 })
 export class CarouselComponent implements OnInit {
 
-projects = Array<Project>();
+  projects = Array<Project>();
   constructor(private projectsService: ProjectsService) { }
 
   ngOnInit() {

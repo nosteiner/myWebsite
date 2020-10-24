@@ -23,19 +23,18 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-            
               "src/assets"
             ],
             "styles": [
               "node_modules/font-awesome/scss/font-awesome.scss",
-              "node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss",
-              "node_modules/angular-bootstrap-md/scss/mdb-free.scss",
+              "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
+              "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
               "src/styles.scss"
-          ],
-          "scripts": [
-            "node_modules/chart.js/dist/Chart.js",
-            "node_modules/hammerjs/hammer.min.js"
-          ]
+            ],
+            "scripts": [
+              "node_modules/chart.js/dist/Chart.js",
+              "node_modules/hammerjs/hammer.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -82,17 +81,16 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "node_modules/font-awesome/scss/font-awesome.scss",
-              "node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss",
-              "node_modules/angular-bootstrap-md/scss/mdb-free.scss",
+              "node_modules/fontawesome/scss/fontawesome.scss",
+              "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
+              "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
               "src/styles.scss"
-          ],
-          "scripts": [
-            "node_modules/chart.js/dist/Chart.js",
-            "node_modules/hammerjs/hammer.min.js"
-          ],
+            ],
+            "scripts": [
+              "node_modules/chart.js/dist/Chart.js",
+              "node_modules/hammerjs/hammer.min.js"
+            ],
             "assets": [
-             
               "src/assets"
             ]
           }
@@ -134,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "myWebsite"
+  "defaultProject": "myWebsite",
+  "cli": {
+    "analytics": false
+  }
 }

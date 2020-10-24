@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+
 import { Message } from '../../Message';
 import { ContactService } from '../../Services/contact.service';
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 
 
 @Component({
@@ -38,7 +39,7 @@ export class ContactCardComponent implements OnInit {
       this.messageEdit.reset();
       this.changeStatus(true);
 
-      if ( status === Error) {
+      if (status === Error) {
         this.success = false;
       } else {
         this.success = true;
