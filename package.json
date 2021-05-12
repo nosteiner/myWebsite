@@ -37,7 +37,7 @@
     "googleapis": "^61.0.0",
     "hammerjs": "^2.0.8",
     "http": "0.0.1-security",
-    "nodemailer": "^6.4.14",
+    "nodemailer": "^6.4.16",
     "path": "^0.12.7",
     "rxjs": "^6.6.3",
     "zone.js": "^0.11.2"
